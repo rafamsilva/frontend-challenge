@@ -24,7 +24,7 @@ A proposta deste desafio é para avaliar seu HTML, CSS, Javascript, conhecimento
 
 **Envie o código**
 
-1.  Enviar um Pull Request(PR);
+1.  Enviar um Pull Request para este repositório;
 
 ### Dicas
 
