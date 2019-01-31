@@ -1,4 +1,4 @@
-<img src="https://i.imgur.com/OevnkFM.png" width="200">
+<img src="https://i.imgur.com/OevnkFM.png" width="300">
 
 ## Sobre o challenge
 
@@ -50,12 +50,14 @@ Nos sugerimos utilizar a [OMDb API](http://www.omdbapi.com/), você também pode
 
 #### Telas / Assets :
 
-Olhe a pasta `/assets`, ali você irá encontrar tudo que precisa.
+**Assets:** Olhe a pasta `/assets`, e ali você irá encontrar tudo que precisa.
 
-[Marvel Prototype](https://marvelapp.com/3cj0i64/screen/52947277)  
+**Telas** [Marvel Prototype](https://marvelapp.com/3cj0i64/screen/52947277)  
 
 ### Contato
 
 Use as [issues](https://github.com/isacjunior/frontend-challenger/issues) ou envie um email: isac.junior@zup.com.br
 
 _Boa sorte!_
+
+Credits - Significa.
