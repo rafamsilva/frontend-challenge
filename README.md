@@ -10,7 +10,7 @@ Você pode utilizar qualquer boilerplate/CRA que você preferir, mas tente reali
 
 * **Home:** Campo de procura que resulta em uma lista;
 
-  _Pense em estado de filmes limpo, loading e filmes não encontrados_
+  _Pense em estado vazio para os filmes, loading e filmes não encontrados_
 
 * **Filmes:** Detalhes dos filmes;
 
@@ -20,27 +20,27 @@ A proposta deste desafio é para avaliar seu HTML, CSS, Javascript, conhecimento
 
 ## Iniciar
 
-1. Faça um fork deste repositório, de preferência em um repositório privado(Github)
-2.  Criar uma branch com seu nome;
-3.  Resolva o desafio da melhor forma que conseguir;
+1.  Criar uma branch com seu nome;
+2.  Resolva o desafio da melhor forma que conseguir;
 
 **Envie o código**
 
-1.  Enviar um Pull Request para este repositório;
+1.  Enviar um Pull Request para a branch `master` deste repositório.
 
 ### Dicas
 
 * Escreva um bom README com o básico de informações (ex: como startar o projeto e como buildar);
-* Não existem telas desenhadas para a versão mobile, mas se você criar esta responsividade será um grande plus. Nós vamos amar ver suas skills;
 * Sinta se a vontade em melhorar e avaliar o design. Pense em guidelines;
-* Existe um botão de "like" nos detalhes dos filmes. Seria ideal que essa informação persistisse;
 * Prefira o uso de metodologias css. Ignore o descrito caso opte por utilizar CSS-IN-JS;
 * Fazer perguntas é bom. Não vamos te penalizar por fazer perguntar;
-* A API as vezes pode demorar em nos responder, pense em loading e estado vazio na sua aplicação;
+* A API as vezes pode demorar em nos responder, pense em loading e estado vazio da sua aplicação;
 * Estamos procurando por sinais do seu entendimento de alguns conceitos como, enventos, promises, ciclos de vida e como você aplica e implementa isto em Javascript;
 * Testes unitários serão bem valorizados;
 * Histórico no git serão bem valorizados;
 * Seu código será avaliado por: semântica, estrutura, legibilidade, tamanho, elegância (entre outros fatores);
+* Existe um botão de "like" nos detalhes dos filmes. Seria ideal que essa informação persistisse;
+* Não existem telas desenhadas para a versão mobile, mas se você criar esta responsividade será um plus.
+* Não existe a necessidade de fazer deploy CI/CD da aplicação. Mas se feito, será um bônus;
 
 ### Informações necessárias
 
@@ -58,6 +58,6 @@ Nos sugerimos utilizar a [OMDb API](http://www.omdbapi.com/), você também pode
 
 Use as [issues](https://github.com/isacjunior/frontend-challenger/issues) ou envie um email: isac.junior@zup.com.br
 
-_Boa sorte!_
+_Nós vamos amar ver suas skills, boa sorte!_
 
 Credits - Significa.
