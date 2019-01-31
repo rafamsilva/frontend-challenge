@@ -1,3 +1,5 @@
+<img src="https://i.imgur.com/OevnkFM.png" width="200">
+
 ## Sobre o challenge
 
 Este é um simples teste, onde você deverá desenvolver uma pequena aplicação utilizando React, tendo nossas telas como referência. Você deve realizar requests em uma API para adquirir o conteúdo a ser filtrado e mostrado.
