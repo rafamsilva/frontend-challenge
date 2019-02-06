@@ -41,6 +41,8 @@ A proposta deste desafio é para avaliar seu HTML, CSS, Javascript, conhecimento
 * Existe um botão de "like" nos detalhes dos filmes. Seria ideal que essa informação persistisse;
 * Não existem telas desenhadas para a versão mobile, mas se você criar esta responsividade será um plus.
 * Não existe a necessidade de fazer deploy CI/CD da aplicação. Mas se feito, será um bônus;
+* Pense em padrões de escrita;
+* Não se esqueça de sempre tentar reutilizar os componentes;
 
 ### Informações necessárias
 
