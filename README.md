@@ -1,4 +1,4 @@
-<img src="https://i.imgur.com/OevnkFM.png" width="300">
+<img src="http://www.zup.com.br/wp-content/uploads/2018/11/LogoZUP-Azul-1.png" width="300">
 
 ## Sobre o challenge
 
