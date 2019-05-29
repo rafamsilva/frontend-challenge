@@ -61,5 +61,3 @@ Nos sugerimos utilizar a [OMDb API](http://www.omdbapi.com/), você também pode
 Use as [issues](https://github.com/isacjunior/frontend-challenge/issues) ou envie um email: isac.junior@zup.com.br
 
 _Nós vamos amar ver suas skills, boa sorte!_
-
-Credits - Significa.
