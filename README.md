@@ -2,7 +2,7 @@
 
 ## Sobre o challenge
 
-**Challenge criado por (Isac Júnior)[https://github.com/isacjunior]**
+**Challenge criado por [Isac Júnior](https://github.com/isacjunior)**
 
 Este é um simples teste, onde você deverá desenvolver uma pequena aplicação utilizando React, tendo nossas telas como referência. Você deve realizar requests em uma API para adquirir o conteúdo a ser filtrado e mostrado.
 
