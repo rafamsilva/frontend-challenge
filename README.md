@@ -2,6 +2,8 @@
 
 ## Sobre o challenge
 
+**Challenge criado por (Isac Júnior)[https://github.com/isacjunior]**
+
 Este é um simples teste, onde você deverá desenvolver uma pequena aplicação utilizando React, tendo nossas telas como referência. Você deve realizar requests em uma API para adquirir o conteúdo a ser filtrado e mostrado.
 
 Você pode utilizar qualquer boilerplate/CRA que você preferir, mas tente realizar de forma simples. É um plus caso você queira efetuar o seu próprio boilerplate para buildar suas aplicações React. Você também é livre em utilizar as ferramentas que desejar.
@@ -58,6 +60,6 @@ Nos sugerimos utilizar a [OMDb API](http://www.omdbapi.com/), você também pode
 
 ### Contato
 
-Use as [issues](https://github.com/isacjunior/frontend-challenge/issues) ou envie um email: isac.junior@zup.com.br
+Use as [issues](https://github.com/isacjunior/frontend-challenge/issues) ou envie um email: tiago.franca@zup.com.br
 
 _Nós vamos amar ver suas skills, boa sorte!_
