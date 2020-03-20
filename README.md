@@ -4,9 +4,9 @@
 
 **Challenge criado por [Isac Júnior](https://github.com/isacjunior)**
 
-Este é um simples teste, onde você deverá desenvolver uma pequena aplicação utilizando React, tendo nossas telas como referência. Você deve realizar requests em uma API para adquirir o conteúdo a ser filtrado e mostrado.
+Este é um simples teste, onde você deverá desenvolver uma pequena aplicação utilizando a lib/framework que desejar, tendo nossas telas como referência. Você deve realizar requests em uma API para adquirir o conteúdo a ser filtrado e mostrado.
 
-Você pode utilizar qualquer boilerplate/CRA que você preferir, mas tente realizar de forma simples. É um plus caso você queira efetuar o seu próprio boilerplate para buildar suas aplicações React. Você também é livre em utilizar as ferramentas que desejar.
+Você pode utilizar qualquer boilerplate/CRA que você preferir, mas tente realizar de forma simples. É um plus caso você queira efetuar o seu próprio boilerplate para buildar suas aplicações. Você também é livre em utilizar as ferramentas que desejar.
 
 ### O aplicativo deve ser uma pesquisa de filmes com duas páginas:
 
@@ -18,7 +18,7 @@ Você pode utilizar qualquer boilerplate/CRA que você preferir, mas tente reali
 
   _Pense sobre loading e detalhes não encontrados_
 
-A proposta deste desafio é para avaliar seu HTML, CSS, Javascript, conhecimento com a lib React entre outras skills que serão demonstradas ao decorrer do projeto.
+A proposta deste desafio é para avaliar seu HTML, CSS, Javascript, conhecimento com a lib/framework entre outras skills que serão demonstradas ao decorrer do projeto.
 
 ## Iniciar
 
@@ -60,6 +60,6 @@ Nos sugerimos utilizar a [OMDb API](http://www.omdbapi.com/), você também pode
 
 ### Contato
 
-Use as [issues](https://github.com/raphaelspimenta/frontend-challenge/issues) ou envie um email: raphael.pimenta@zup.com.br
+Use as [issues](https://github.com/rafamsilva/frontend-challenge/issues) ou envie um email: rafael.silva@zup.com.br
 
 _Nós vamos amar ver suas skills, boa sorte!_
