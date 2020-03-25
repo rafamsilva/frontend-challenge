@@ -1,1 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+$bg-color: #0a1015;
+body {
+  background-color: $bg-color !important;
+}
