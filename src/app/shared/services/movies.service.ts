@@ -19,12 +19,22 @@ export class MovieService {
       .pipe(catchError(this.handleError), map(this.jsonDataToMovies));
   }
 
+  getMovie(imdbID: string): Observable<Movie> {
+    return this.http
+      .get(this.applicationUrl + `&i=${imdbID}`)
+      .pipe(catchError(this.handleError), map(this.jsonDataToMovie));
+  }
+
   jsonDataToMovies(jsonData: any): Movie[] {
     const movies: Movie[] = [];
     if (jsonData && jsonData.Search) {
       jsonData.Search.forEach(element => movies.push(element as Movie));
     }
     return movies;
+  }
+
+  jsonDataToMovie(jsonData: any): Movie {
+    return jsonData as Movie;
   }
 
   handleError(error: any): Observable<any> {

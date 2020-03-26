@@ -1,0 +1,62 @@
+<div class="container">
+  <app-nav-bar></app-nav-bar>
+  <div class="row" id="btBackMovieSearch">
+    <img
+      routerLink="/"
+      src="../../../../assets/icon-arrow-white.png"
+      alt="Voltar"
+    />
+  </div>
+  <div class="row movie-container">
+    <div class="detail-movie-container">
+      <div class="time-movie">{{ movie?.Runtime }} - {{ movie?.Year }}</div>
+      <div class="title-movie">{{ movie?.Title }}</div>
+
+      <div class="note-container">
+        <div class="imdb-container">
+          <div class="imdb-icon imdb-icon-sub1">
+            <img src="../../../../assets/logo-imdb.svg" alt="IMDb" />
+          </div>
+          <div class="imdb-icon-sub2">{{ movie?.imdbRating }}</div>
+        </div>
+        <div class="rating-container">
+          <div class="rating-icon rating-icon-sub1">
+            <img
+              src="../../../../assets/logo-rotten-tomatoes.svg"
+              alt="Logo Tomatoes"
+            />
+          </div>
+          <div class="rating-icon-sub2">{{ movie?.Metascore }}%</div>
+        </div>
+        <div class="favorite-container">
+          <button type="button" class="btn btn-outline-danger">
+            <img src="../../../../assets/heart-grey.svg" alt="Favorite" /> Add
+            to favourites
+          </button>
+        </div>
+      </div>
+
+      <div class="plot-container">
+        <div>Plot</div>
+        <p>{{ movie?.Plot }}</p>
+      </div>
+      <div class="cast-director-container">
+        <div class="cast-detail">
+          <div>Cast</div>
+          <p>{{ movie?.Actors }}</p>
+        </div>
+        <div class="genre-detail">
+          <div>Genre</div>
+          <p>{{ movie?.Genre }}</p>
+        </div>
+        <div class="director-detail">
+          <div>Director</div>
+          <p>{{ movie?.Director }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="image-movie-container">
+      <img [src]="movie?.Poster" [alt]="movie?.Title" />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+.input-group input {
+  box-shadow: none;
+  border: none;
+}
+
+#button-search-bar {
+  background-color: #fff;
+  border: none;
+  box-shadow: none;
+}
+
+#button-search-bar-loading {
+  @extend #button-search-bar;
+}

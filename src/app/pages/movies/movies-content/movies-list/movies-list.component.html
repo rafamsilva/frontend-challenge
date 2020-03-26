@@ -1,0 +1,11 @@
+<section>
+  <div class="row content-list-movies">
+    <div class="item-list-movie" *ngFor="let movie of movies">
+      <img
+        [routerLink]="['detail', movie.imdbID]"
+        [src]="movie.Poster"
+        [alt]="movie.Title"
+      />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <button
+          type="button"
+          class="btn btn-outline-secondary"
+          id="button-search-bar"
+          (click)="search()"
+          *ngIf="!loading"
+        >
+          <img src="../../../../assets/lupa.svg" alt="Search" />
+        </button>
+        <button
+          class="btn btn-primary"
+          type="button"
+          disabled
+          id="button-search-bar-loading"
+          *ngIf="loading"
+        >
+          <span
+            class="spinner-border spinner-border-sm text-dark"
+            role="status"
+            aria-hidden="true"
+          ></span>
+          <span class="sr-only">Loading...</span>
+        </button>
+      </div>
+      <input
+        type="text"
+        class="form-control"
+        aria-label="Type movie what you want find"
+        placeholder="Search movies..."
+        [formControl]="searchField"
+      />
+    </div>
+  </div>
+</div>

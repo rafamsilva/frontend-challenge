@@ -1,5 +1,10 @@
 import { Component, OnInit } from "@angular/core";
-import { Validators, FormControl } from "@angular/forms";
+import {
+  Validators,
+  FormControl,
+  FormGroup,
+  FormBuilder
+} from "@angular/forms";
 
 import { Movie } from "../../../shared/models/movie.model";
 import { MovieService } from "src/app/shared/services/movies.service";
@@ -12,17 +17,30 @@ import { MovieService } from "src/app/shared/services/movies.service";
 export class MoviesContentComponent implements OnInit {
   searchField: FormControl = new FormControl("");
   movies: Movie[] = [];
+  loading: boolean = false;
+  alreadyRequest: boolean = false;
+  form: FormGroup;
 
-  constructor(private movieService: MovieService) {}
+  constructor(private movieService: MovieService, private fb: FormBuilder) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.buildForm();
+  }
 
   search() {
-    console.log(this.searchField.value);
+    this.loading = true;
+    this.alreadyRequest = true;
     this.movieService
-      .getMovieByParam(this.searchField.value)
+      .getMovieByParam(this.form.get("searchField").value)
       .subscribe(movies => {
         this.movies = movies;
+        this.loading = false;
       });
+  }
+
+  buildForm(): void {
+    this.form = this.fb.group({
+      searchField: [""]
+    });
   }
 }

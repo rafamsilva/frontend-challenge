@@ -1,51 +1,21 @@
 <div class="container home-container">
-  <nav class="navbar navbar-expand-lg navbar-dark" id="home-container-nav">
-    <img src="../../../../assets/logo.svg" alt="OmDb Api" />
-  </nav>
-  <div class="row">
-    <div class="col">
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <button
-            type="button"
-            class="btn btn-outline-secondary"
-            id="button-search-bar"
-            (click)="search()"
-          >
-            <img src="../../../../assets/lupa.svg" alt="Search" />
-          </button>
-        </div>
-        <input
-          type="text"
-          class="form-control"
-          aria-label="Type movie what you want find"
-          [formControl]="searchField"
-        />
-      </div>
-    </div>
-  </div>
+  <app-nav-bar></app-nav-bar>
 
-  <section>
-    <div class="row" *ngIf="movies?.length == 0">
-      <div class="col">
-        <div id="empty-state">
-          <img
-            src="../../../../assets/illustration-empty-state.png"
-            alt="Empty State"
-          />
-        </div>
-        <div>
-          <p class="main-text-empty">Dont' know what to search?</p>
-          <p class="sub-text-empty">Here's an offer you can't refuse</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section>
-    <div class="row content-list-movies" *ngIf="movies?.length > 0">
-      <div class="item-list-movie" *ngFor="let movie of movies">
-        <img [src]="movie.Poster" [alt]="movie.Title" />
-      </div>
-    </div>
-  </section>
+  <app-search-bar
+    [searchField]="form.get('searchField')"
+    (searchEvent)="search()"
+  ></app-search-bar>
+
+  <app-loading *ngIf="loading"></app-loading>
+
+  <app-not-found
+    *ngIf="movies?.length == 0 && !loading && alreadyRequest"
+  ></app-not-found>
+
+  <app-empty-state *ngIf="!alreadyRequest && !loading"></app-empty-state>
+
+  <app-movies-list
+    [movies]="movies"
+    *ngIf="movies?.length > 0"
+  ></app-movies-list>
 </div>

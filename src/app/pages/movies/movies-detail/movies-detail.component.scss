@@ -1,0 +1,164 @@
+.movie-container {
+  display: flex;
+  justify-content: space-around;
+}
+.detail-movie-container {
+  flex: 1;
+}
+
+#btBackMovieSearch {
+  img {
+    width: 35px;
+    margin-bottom: 13px;
+    cursor: pointer;
+  }
+}
+
+.image-movie-container {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  img {
+    margin: 0 auto;
+    justify-content: center;
+    width: 95%;
+    padding: 0px 20px 0px 20px;
+    border-radius: 35px;
+  }
+}
+
+.time-movie {
+  color: #7a8c99;
+  font-size: 20px;
+}
+
+.title-movie {
+  color: #fff;
+  font-size: 50px;
+}
+
+.note-container {
+  display: flex;
+  margin-top: 25px;
+  flex-direction: row;
+  .item {
+    flex: 1;
+    text-align: center;
+    margin: 5px;
+  }
+}
+
+.imdb-container {
+  display: flex;
+  flex-direction: row;
+  width: 95px;
+  border-radius: 5px;
+  border: 1px solid #7a8c99;
+
+  .imdb-icon-sub1 {
+    background-color: #f49f3f;
+    padding: 4px 6px 0px 5px;
+  }
+  .imdb-icon-sub2 {
+    padding-left: 10px;
+    padding-top: 7px;
+    color: #7a8c99;
+  }
+}
+
+.rating-container {
+  display: flex;
+  flex-direction: row;
+  width: 95px;
+  border-radius: 5px;
+  border: 1px solid #7a8c99;
+  margin-left: 46px;
+
+  .rating-icon-sub1 {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 4px;
+    background-color: rgb(255, 0, 0);
+    padding: 3px 6px 0px 5px;
+    img {
+      padding: 8px 7px 5px 8px;
+    }
+  }
+  .rating-icon-sub2 {
+    padding-left: 10px;
+    padding-top: 8px;
+    color: #7a8c99;
+  }
+}
+
+.favorite-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 46px;
+
+  .btn-outline-danger {
+    color: #7a8c99;
+    border-color: #7a8c99;
+
+    &:hover {
+      color: #7a8c99;
+      border-color: #7a8c99;
+      background-color: #fff;
+    }
+  }
+}
+
+.plot-container {
+  margin-top: 100px;
+  div {
+    color: #7a8c99;
+    font-size: 23px;
+  }
+  p {
+    color: #fff;
+    font-size: 20px;
+  }
+}
+
+.cast-director-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.cast-detail {
+  flex: 1;
+  padding-right: 15px;
+  div {
+    color: #7a8c99;
+    font-size: 18px;
+  }
+  p {
+    color: #fff;
+    font-size: 15px;
+  }
+}
+.genre-detail {
+  flex: 1;
+  padding-right: 15px;
+  div {
+    color: #7a8c99;
+    font-size: 18px;
+  }
+  p {
+    color: #fff;
+    font-size: 15px;
+  }
+}
+.director-detail {
+  flex: 1;
+  padding-right: 15px;
+  div {
+    color: #7a8c99;
+    font-size: 18px;
+  }
+  p {
+    color: #fff;
+    font-size: 15px;
+  }
+}
