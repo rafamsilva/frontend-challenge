@@ -5,6 +5,7 @@ import {
   FormGroup,
   FormBuilder
 } from "@angular/forms";
+import { switchMap, debounceTime, distinctUntilChanged } from "rxjs/operators";
 
 import { Movie } from "../../../shared/models/movie.model";
 import { MovieService } from "src/app/shared/services/movies.service";
@@ -40,7 +41,22 @@ export class MoviesContentComponent implements OnInit {
 
   buildForm(): void {
     this.form = this.fb.group({
-      searchField: [""]
+      searchField: ["", Validators.required]
     });
+
+    this.form.controls["searchField"].valueChanges
+      .pipe(
+        debounceTime(1000),
+        distinctUntilChanged(),
+        switchMap((value: string) => {
+          this.loading = true;
+          this.alreadyRequest = true;
+          return this.movieService.getMovieByParam(value);
+        })
+      )
+      .subscribe(movies => {
+        this.movies = movies;
+        this.loading = false;
+      });
   }
 }
