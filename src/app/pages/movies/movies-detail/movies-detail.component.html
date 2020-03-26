@@ -29,9 +29,23 @@
           <div class="rating-icon-sub2">{{ movie?.Metascore }}%</div>
         </div>
         <div class="favorite-container">
-          <button type="button" class="btn btn-outline-danger">
+          <button
+            *ngIf="!isFavorite"
+            (click)="saveFavorite(movie)"
+            type="button"
+            class="btn btn-outline-danger"
+          >
             <img src="../../../../assets/heart-grey.svg" alt="Favorite" /> Add
             to favourites
+          </button>
+          <button
+            *ngIf="isFavorite"
+            (click)="removeFavorite(movie)"
+            type="button"
+            class="btn btn-secondar"
+          >
+            <img src="../../../../assets/heart-full.svg" alt="Favorited" />
+            Added
           </button>
         </div>
       </div>
