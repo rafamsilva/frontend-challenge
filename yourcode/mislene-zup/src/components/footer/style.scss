@@ -1,0 +1,21 @@
+footer.wrapper-footer { display: flex; justify-content: space-between !important; height: 105px !important;
+  @media all and (max-width: 768px) { height: 97px !important; flex-direction: column; }
+
+  div.footer-info { display: flex; flex-direction: column;
+    @media all and (max-width: 768px) { align-items: center !important; }
+  }
+
+  div.footer-address { display: flex; flex-direction: column; align-items: flex-end !important;
+    @media all and (max-width: 768px) { align-items: center !important; }
+  }
+
+  strong { font-size: 15px; color: $light;
+    @media all and (max-width: 768px) { font-size: 13px; }
+  }
+
+  a, span { font-size: 13px; color: $light;
+    @media all and (max-width: 768px) { font-size: 10px; }
+  }
+
+  a { text-decoration: none; width: max-content; }
+}

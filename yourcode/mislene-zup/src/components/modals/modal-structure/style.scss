@@ -1,0 +1,19 @@
+div.header-title { color: $light; font-size: 24px; height: 72px;
+  @media all and (max-width: 320px) { font-size: 18px !important; }
+
+  span.modal-header-text { margin: 0 10px; }
+}
+
+div.icon-container { $widthHeight: 35px; width: $widthHeight; height: $widthHeight; border-radius: 100%; background: rgba(51, 51, 51, 0.1);
+  @media all and (max-width: 320px) { $widthHeight: 30px; width: $widthHeight; height: $widthHeight; }
+}
+
+div.card-text { padding: 0 24px !important; font-size: 18px; text-align: center; }
+
+div.actions {
+  @media all and (max-width: 500px) { flex-direction: column-reverse !important; }
+
+  button.action-btn { width: 180px !important;
+    @media all and (max-width: 500px) { margin: 20px 0 !important; }
+  }
+}

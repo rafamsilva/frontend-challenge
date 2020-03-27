@@ -1,0 +1,166 @@
+@mixin column($count, $gap) {
+	-webkit-column-count:   $count;
+	-moz-column-count:      $count;
+	column-count:           $count;
+
+	-webkit-column-gap: $gap;
+	-moz-column-gap:    $gap;
+	column-gap:         $gap;
+}
+
+@mixin box-sizing() {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	-ms-box-sizing:     border-box;
+	box-sizing:         border-box;
+}
+
+@mixin transform-translate($x, $y) {
+	-webkit-transform:  translate($x, $y);
+	-moz-transform:     translate($x, $y);
+	-ms-transform:      translate($x, $y);
+	transform:          translate($x, $y);
+}
+
+@mixin transform-translate3d($x, $y, $z) {
+	-webkit-transform:  translate3d($x, $y, $z);
+	-moz-transform:     translate3d($x, $y, $z);
+	-ms-transform:      translate3d($x, $y, $z);
+	transform:          translate3d($x, $y, $z);
+}
+
+@mixin transform-origin($x, $y, $z) {
+	-webkit-transform-origin: $x $y $z;
+	-moz-transform-origin:    $x $y $z;
+	-ms-transform-origin:     $x $y $z;
+	transform-origin:         $x $y $z;
+}
+
+@mixin transform-scale($x, $y) {
+	-webkit-transform:  scale($x, $y);
+	-moz-transform:     scale($x, $y);
+	-ms-transform:      scale($x, $y);
+	transform:          scale($x, $y);
+}
+
+@mixin transform-rotate($deg) {
+	-webkit-transform:  rotate($deg);
+	-moz-transform:     rotate($deg);
+	-ms-transform:      rotate($deg);
+	transform:          rotate($deg);
+}
+
+@mixin transform-rotateX($deg) {
+	-webkit-transform:  rotateX($deg);
+	-moz-transform:     rotateX($deg);
+	-ms-transform:      rotateX($deg);
+	transform:          rotateX($deg);
+}
+
+@mixin transform-rotateY($deg) {
+	-webkit-transform:  rotateY($deg);
+	-moz-transform:     rotateY($deg);
+	-ms-transform:      rotateY($deg);
+	transform:          rotateY($deg);
+}
+
+@mixin transform-skewY($degY) {
+	-webkit-transform:  skewY($degY);
+	-moz-transform:     skewY($degY);
+	-ms-transform:      skewY($degY);
+	transform:          skewY($degY);
+}
+
+@mixin transform-skewX($degX) {
+	-webkit-transform:  skewX($degX);
+	-moz-transform:     skewX($degX);
+	-ms-transform:      skewX($degX);
+	transform:          skewX($degX);
+}
+
+@mixin transition($properties) {
+	-webkit-transition: $properties;
+	-moz-transition:    $properties;
+	-ms-transition:     $properties;
+	transition:         $properties;
+}
+
+@mixin transition-delay($seletor, $tempo, $tipoAnimacao, $delay) {
+	-webkit-transition: $seletor $tempo $tipoAnimacao $delay;
+	-moz-transition:    $seletor $tempo $tipoAnimacao $delay;
+	-ms-transition:     $seletor $tempo $tipoAnimacao $delay;
+	transition:         $seletor $tempo $tipoAnimacao $delay;
+}
+
+@mixin background-size($width, $height) {
+	-webkit-background-size:  $width $height !important;
+	-moz-background-size:     $width $height !important;
+	-ms-background-size:      $width $height !important;
+	background-size:          $width $height !important;
+}
+
+@mixin border-radius($ray) {
+	-webkit-border-radius:  $ray;
+	-moz-border-radius:     $ray;
+	-ms-border-radius:      $ray;
+	border-radius:          $ray;
+}
+
+
+@mixin animation($animation) {
+	-webkit-animation:  $animation;
+	-moz-animation:     $animation;
+	-ms-animation:      $animation;
+	animation:          $animation;
+}
+
+
+@mixin blur($blur) {
+	filter:         blur($blur);
+	-ms-filter:     blur($blur);
+	-moz-filter:    blur($blur);
+	-webkit-filter: blur($blur);
+
+	-webkit-backface-visibility:  hidden;
+	-moz-backface-visibility:     hidden;
+	-ms-backface-visibility:      hidden;
+	backface-visibility:          hidden;
+
+	-webkit-perspective:  1000;
+	-moz-perspective:     1000;
+	-ms-perspective:      1000;
+	perspective:          1000;
+}
+
+@mixin gray-filter($percentage) {
+	-webkit-filter: grayscale($percentage);
+	-moz-filter:    grayscale($percentage);
+	-ms-filter:     grayscale($percentage);
+	-o-filter:      grayscale($percentage);
+	filter:         grayscale($percentage);
+	filter: gray; /* IE 6-9 */
+}
+
+@mixin gray-filter-important($percentage) {
+	-webkit-filter: grayscale($percentage) !important;
+	-moz-filter:    grayscale($percentage) !important;
+	-ms-filter:     grayscale($percentage) !important;
+	-o-filter:      grayscale($percentage) !important;
+	filter:         grayscale($percentage) !important;
+	filter: gray; /* IE 6-9 */
+}
+
+@mixin box-shadow($properties) {
+	-webkit-box-shadow:   $properties;
+	-moz-box-shadow:      $properties;
+	box-shadow:           $properties;
+}
+
+@mixin placeholder-color($color, $opacity) {
+	::-webkit-input-placeholder { color: rgba($color, $opacity); }
+	:-moz-placeholder           { color: rgba($color, $opacity); }
+	::-moz-placeholder          { color: rgba($color, $opacity); }
+	:-moz-input-placeholder     { color: rgba($color, $opacity); }
+	::-moz-input-placeholder    { color: rgba($color, $opacity); }
+	:-ms-input-placeholder      { color: rgba($color, $opacity); }
+}
