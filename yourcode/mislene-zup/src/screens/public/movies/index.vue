@@ -10,7 +10,7 @@
       color="primary"
     />
 
-    <div class="background-image d-flex justify-center align-center">
+    <div class="background-image d-flex">
       <div
         class="form-page"
       >
