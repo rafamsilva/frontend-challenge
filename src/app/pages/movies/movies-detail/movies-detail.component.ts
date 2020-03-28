@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from "@angular/router";
 
 import { Movie } from "../../../shared/models/movie.model";
 import { MovieService } from "../../../shared/services/movies.service";
+import { switchMap } from "rxjs/operators";
 
 @Component({
   selector: "app-movies-detail",
@@ -23,11 +24,19 @@ export class MoviesDetailComponent implements OnInit {
   }
 
   loadMovie() {
-    let imdbID = this.route.snapshot.url[1].path;
-    this.movieService.getMovie(imdbID).subscribe(movie => {
-      this.movie = movie;
-      this.validFavorite(movie);
-    });
+    this.route.paramMap
+      .pipe(
+        switchMap(params => this.movieService.getMovie(params.get("imdbID")))
+      )
+      .subscribe(
+        movie => {
+          this.movie = movie;
+          this.validFavorite(movie);
+        },
+        err => {
+          alert(err);
+        }
+      );
   }
 
   saveFavorite(movie): void {

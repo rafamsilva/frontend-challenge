@@ -26,6 +26,21 @@ export class MoviesContentComponent implements OnInit {
 
   ngOnInit() {
     this.buildForm();
+
+    this.form.controls["searchField"].valueChanges
+      .pipe(
+        debounceTime(1000),
+        distinctUntilChanged(),
+        switchMap((value: string) => {
+          this.loading = true;
+          this.alreadyRequest = true;
+          return this.movieService.getMovieByParam(value);
+        })
+      )
+      .subscribe(movies => {
+        this.movies = movies;
+        this.loading = false;
+      });
   }
 
   search() {
@@ -43,20 +58,5 @@ export class MoviesContentComponent implements OnInit {
     this.form = this.fb.group({
       searchField: ["", Validators.required]
     });
-
-    this.form.controls["searchField"].valueChanges
-      .pipe(
-        debounceTime(1000),
-        distinctUntilChanged(),
-        switchMap((value: string) => {
-          this.loading = true;
-          this.alreadyRequest = true;
-          return this.movieService.getMovieByParam(value);
-        })
-      )
-      .subscribe(movies => {
-        this.movies = movies;
-        this.loading = false;
-      });
   }
 }
