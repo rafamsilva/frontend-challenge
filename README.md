@@ -51,4 +51,4 @@ npm run test
 
 ### Análise Geral
 
-!["Análise Geral"](https://imgur.com/7o6RmKG)
+!["Análise Geral de Cobertura"](https://i.imgur.com/7o6RmKG.png)
