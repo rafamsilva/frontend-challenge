@@ -1,0 +1,27 @@
+.home {
+  &__search-icon {
+    background: url("../../assets/icon-magnifier-grey.svg") 100%;
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+    padding-left: 40px;
+    background-color: white;
+    transition: all 0.2s ease;
+  }
+  &__search-icon:focus {
+    background-position: 15px 10px;
+    padding-left: 50px;
+  }
+}
+
+.empty-state {
+  &__title {
+    width: 200px;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+  }
+  &__subTitle {
+    color: #7a8c99;
+    font-size: 14px;
+  }
+}
