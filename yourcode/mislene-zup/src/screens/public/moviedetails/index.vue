@@ -42,7 +42,19 @@
             >
               <div class="box-info">
                 <div class="box-element">
-                  <p><span class="box-one">IMDb</span><span class="box-two">{{ movie.Ratings[0].Value }}</span></p>
+                  <p>
+                    <span
+                      class="box-one"
+                    >
+                      IMDb
+                    </span>
+                    <span
+                      v-if="movie.Ratings"
+                      class="box-two"
+                    >
+                      {{ movie.Ratings[0].Value }}
+                    </span>
+                  </p>
                 </div>
 
                 <div class="box-element">
@@ -53,7 +65,12 @@
                         alt="like"
                       >
                     </span>
-                    <span class="box-two">{{ movie.Ratings[1].Value }}</span>
+                    <span
+                      v-if="movie.Ratings"
+                      class="box-two"
+                    >
+                      {{ movie.Ratings[1].Value }}
+                    </span>
                   </p>
                 </div>
 
@@ -118,11 +135,6 @@
             />
           </div>
         </v-col>
-        <v-responsive
-          v-if="n === 2"
-          :key="`width-${n}`"
-          width="100%"
-        />
       </v-row>
     </div>
   </div>

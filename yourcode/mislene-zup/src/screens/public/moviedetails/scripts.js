@@ -34,7 +34,6 @@ export default {
       this.isLoadingMovie = true
       this.actionGetDetailedById(id)
         .then((data) => {
-          debugger
           this.isLoadingMovie = false
           this.movie = data
         }).catch(() => {
