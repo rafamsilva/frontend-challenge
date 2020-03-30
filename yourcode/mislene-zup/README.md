@@ -33,6 +33,6 @@ Foi utilizado a API [OMDb API](http://www.omdbapi.com/).
 
 * Busque por um filme - Ex:. Matrix - o campo título é o obrigatório;
 * Você pode filtrar por ano - o campo ano é o opcional;
-* Você pode filtrar por categorias (Filme, Série e Episódio) - o campo tipo é o opcional;
+* Você pode filtrar por categorias (Filme, Série e Episódio) - o campo tipo é o opcional.
 
 
