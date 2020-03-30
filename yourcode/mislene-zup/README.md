@@ -1,4 +1,4 @@
-<img src="http://avaliacoesefetivas.com.br/logo.png" width="300">
+<img src="http://avaliacoesefetivas.com.br/logo.png">
 
 ## Sobre o What's in
 
