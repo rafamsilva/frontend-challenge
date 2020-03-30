@@ -1,0 +1,20 @@
+:host {
+  text-align: center;
+  color: #000000;
+}
+
+.img-loading {
+  width: 300px;
+}
+
+::ng-deep .block-ui-wrapper {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 30000;
+  cursor: wait;
+}

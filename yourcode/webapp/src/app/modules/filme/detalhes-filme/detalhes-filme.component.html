@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="row mt-4">
+    <div class="col-md-12">
+      <img class="icon-return" src="../../../../assets/icons/icon-arrow-white.svg" [routerLink]="['']" />
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-md-6 text-center order-md-2 mb-4">
+      <img class="img-detail" [src]="filme?.Poster" [alt]="filme?.Title" *ngIf="filme?.Poster && filme?.Poster != 'N/A'; else templatePoster" />
+      <ng-template #templatePoster>
+        <img class="img-detail" src="../../../../assets/img/no_image.svg" />
+      </ng-template>
+    </div>
+    <div class="col-md-6 order-md-1">
+      <div class="row">
+        <div class="col-md-12 mt-3">
+          <span class="subtitle">{{ filme?.Runtime }} - {{ filme?.Year }}</span>
+        </div>
+        <div class="col-md-12 mt-4">
+          <h1 class="fs-50 text-default">{{ filme?.Title }}</h1>
+        </div>
+        <div class="col-md-4 mt-5">
+          <div class="input-group mb-3 mt-1">
+            <div class="input-group-prepend">
+              <span><img src="../../../../assets/logo/logo-imdb.svg" /></span>
+            </div>
+            <input type="text" readonly class="form-control form-control-sm" [value]="imdb">
+          </div>
+        </div>
+        <div class="col-md-3 mt-5">
+          <div class="input-group mb-3 mt-1">
+            <div class="input-group-prepend">
+              <span class="input-group-text bg-danger border-0"><img
+                  src="../../../../assets/logo/logo-rotten-tomatoes.svg" /></span>
+            </div>
+            <input type="text" readonly class="form-control form-control-sm" [value]="tomatoes">
+          </div>
+        </div>
+        <div class="col-md-5 mt-5">
+          <button class="btn btn-sm btn-outline-secondary" *ngIf="!favorito; else templateBotao" (click)="adicionarRemoverFavorito()"
+            ><img src="../../../../assets/icons/icon-heart-white.svg" />
+            Add Favorito</button>
+          <ng-template #templateBotao>
+            <button class="btn btn-sm " [ngClass]="{'btn-danger': !textoRemover, 'btn-outline-secondary': textoRemover}" (click)="adicionarRemoverFavorito()" (mouseover)="textoRemover=true" (mouseleave)="textoRemover=false"><img src="../../../../assets/icons/icon-heart-white.svg" />
+              <span *ngIf="textoRemover"> Remover Favorito</span>
+              <span *ngIf="!textoRemover"> Adicionado</span>
+              </button>
+          </ng-template>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 mt-4">
+          <h4 class="subtitle">Enredo</h4>
+          <span class="text-default">{{filme?.Plot}}</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mt-4">
+          <h4 class="subtitle">Elenco</h4>
+          <span class="text-default">{{filme?.Actors}}</span>
+        </div>
+        <div class="col-md-4 mt-4">
+          <h4 class="subtitle">Gênero</h4>
+          <span class="text-default">{{filme?.Genre}}</span>
+        </div>
+        <div class="col-md-4 mt-4">
+          <h4 class="subtitle">Diretor</h4>
+          <span class="text-default">{{filme?.Director}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

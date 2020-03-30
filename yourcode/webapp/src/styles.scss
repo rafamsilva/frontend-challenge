@@ -1,0 +1,24 @@
+
+// Cores
+
+$bg-color: #343a40;
+$white-color: #ffffff;
+$gray-color: #A0A0A0;
+
+
+body {
+  background-color: $bg-color !important;
+}
+
+
+.fs-50 {
+  font-size: 50px;
+}
+
+.text-default {
+  color: $white-color;
+}
+
+.subtitle {
+  color: $gray-color;
+}

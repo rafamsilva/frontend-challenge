@@ -1,0 +1,17 @@
+<div class="card mt-4" [routerLink]="['detalhes-filme', filme?.imdbID]">
+  <img [src]="filme?.Poster" [alt]="filme?.Title" *ngIf="filme?.Poster != 'N/A'; else noImagePath">
+  <ng-template #noImagePath>
+    <img class="card-img-top" src="../../../../assets/img/no_image.svg">
+  </ng-template>
+  <div class="rating">
+    <img class="img-rating" src="../../../../assets/icons/icon-heart-white.svg" *ngIf="!filme.favorito; else templateFavorito" />
+    <ng-template #templateFavorito>
+      <img class="img-rating" src="../../../../assets/icons/icon-heart-full.svg" />
+    </ng-template>
+
+  </div>
+  <div class="info">
+    <h4>{{filme?.Title}}</h4>
+    <p>{{filme?.Year}}</p>
+  </div>
+</div>

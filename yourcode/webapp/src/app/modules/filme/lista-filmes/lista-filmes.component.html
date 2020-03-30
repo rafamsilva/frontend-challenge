@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-12">
+      <form [formGroup]="buscarForm">
+        <div class="input-group mb-3">
+          <input type="text" formControlName="titulo" class="form-control"
+            placeholder="Qual filme você está procurando?" />
+          <div class="input-group-append">
+            <span class="input-group-text bg-white"><img
+                src="../../../../assets/icons/icon-magnifier-grey.svg" /></span>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-12" *ngIf="loading; else templateLoading">
+          <app-loading></app-loading>
+        </div>
+        <ng-template #templateLoading>
+          <div class="col-lg-3 col-md-4 col-sm-6 mt-5" *ngFor="let filme of filmes">
+            <app-card-filme [filme]="filme"></app-card-filme>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>
