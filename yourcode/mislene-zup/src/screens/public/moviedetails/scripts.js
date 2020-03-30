@@ -1,7 +1,7 @@
 import { mapActions } from 'vuex'
 import { ADD_TOAST_MESSAGE } from 'vuex-toast'
-import FooterSagah from '@/components/footer/'
-import SagahHeader from '@/components/header/'
+import Footer from '@/components/footer/'
+import Header from '@/components/header/'
 
 export default {
 
@@ -16,8 +16,8 @@ export default {
     }
   },
   components: {
-    FooterSagah,
-    SagahHeader
+    Footer,
+    Header
   },
   mounted () {
     this.getMovie()

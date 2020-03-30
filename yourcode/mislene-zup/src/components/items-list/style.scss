@@ -1,32 +1,27 @@
-div.items { width: 50%;
-  @media all and (max-width: 600px) { width: 100% !important; margin-top: 35px; }
-
-  div.items-header {
-    @media all and (min-width: 1500px) { height: 60px !important; align-items: center !important; }
-
-    @media all and (max-width: 1500px) { flex-direction: column; justify-content: flex-start; align-items: flex-start; }
-
-    div.section-title { font-weight: bold; font-size: 16px; line-height: 24px; color: $primary;
-      @media all and (min-width: 1500px) { align-items: center !important; }
-      @media all and (max-width: 1500px) { align-self: flex-start !important; }
-    }
-
-    div.input-filter {
-      @media all and (max-width: 1500px) { width: 100% !important; }
-    }
-
-    div.input-sort {
-      @media all and (max-width: 1500px) { width: 100% !important; }
-    }
-  }
-
+div.items {
   div.loading { height: 100%; }
 
-  div.item-list { background-color: #f5f5f5; border-radius: 8px; padding: 5px; overflow-y: auto; max-height: 600px;
-    div.list-item { padding: 5px; color: #616161; border-bottom: 0.5px solid #bdbdbd; max-height: 100%; }
-
-    div.list-item:first-child { border-bottom: 0.5px solid #bdbdbd !important; }
+  div.item-list { border-radius: 8px; padding: 5px; overflow-y: auto; max-height: 600px;
+    div.list-item {
+      padding: 5px;
+      color: #616161;
+      max-height: 100%;
+      float: left;
+      .item-image {
+        height: 285px;
+        width: 217px;
+        border-radius: 5px;
+      }
+    }
 
     div.list-item:last-child { border-bottom: none !important; }
   }
+  div.search-movie {
+    h3 { color: #fff; font-weight: 400; font-size: 25px; }
+    p { color: #8b93a6; font-size: 18px; }
+    img {
+      @media all and (max-width: 400px) { width: 200px; }
+    }
+  }
+  .v-pagination__more { color: #fff; }
 }

@@ -1,15 +1,19 @@
 <template>
-  <div class="container-header">
-    <div class="header d-flex justify-space-between align-center py-2 px-2">
-      <div class="centered">
-        <img
-          class="logo-zup"
-          src="@/assets/imgs/logo.png"
-          alt="logo-zup"
+  <header>
+    <div class="container">
+      <v-row>
+        <v-col
+          md="12"
         >
-      </div>
+          <img
+            class="logo-zup"
+            src="@/assets/imgs/logo.png"
+            alt="logo-zup"
+          >
+        </v-col>
+      </v-row>
     </div>
-  </div>
+  </header>
 </template>
 
 <style lang="scss">

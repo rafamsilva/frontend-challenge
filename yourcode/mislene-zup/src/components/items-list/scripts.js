@@ -1,3 +1,5 @@
+const noImage = require('@/assets/imgs/notfound.png')
+
 export default {
   name: 'itemsList',
   props: [
@@ -19,6 +21,13 @@ export default {
     }
   },
   methods: {
+    creatorImage (stringImage) {
+      // debugger
+      if (stringImage === 'N/A') {
+        // debugger
+      }
+      return stringImage === 'N/A' ? noImage : stringImage
+    },
     itemDetail (item) {
       this.$emit('emit-detail-item', item)
     },

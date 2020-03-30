@@ -1,24 +1,5 @@
-div.container-header {
-  div.header { background-color: #000; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); height: 75px;
-    @media all and (max-width: 768px) { height: 48px; }
-
-    div.centered { display: flex; width: 1024px; margin: 0 auto; }
-
-    img.logo-zup { width: 160px;
-      @media all and (max-width: 768px) { width: 120px; }
-    }
-
-    div.avatar { border: 1px solid #bdbdbd; border-radius: 40.114px; }
-
-    div.header-avatar-icon { $widthHeight: 45px; width: $widthHeight !important; height: $widthHeight !important; min-width: $widthHeight !important;
-      @media all and (max-width: 768px) { $widthHeight: 35px; width: $widthHeight !important; height: $widthHeight !important; min-width: $widthHeight !important; }
-    }
-
-    img.avatar-icon { width: 85%; }
-
-    div.username { color: #bdbdbd;
-      @media all and (max-width: 375px) { width: 100%; }
-    }
+div.container {
+  img.logo-zup { width: 160px;
+    @media all and (max-width: 768px) { width: 120px; }
   }
 }
-div.menu-item { color: #828282 !important; font-weight: 600 !important; }

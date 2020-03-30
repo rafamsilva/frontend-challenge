@@ -25,21 +25,28 @@
     >
       <div
         v-if="items.length === 0"
-        class="list-item d-flex justify-center align-center"
       >
-        <span
-          v-if="textNoneFound"
-          class="item-name"
-        >
-          {{ textNoneFound }}
-        </span>
+        <div class="col-md-12 text-center search-movie">
+          <span
+            v-if="textNoneFound"
+            class="item-name"
+          >
+            {{ textNoneFound }}
+          </span>
 
-        <span
-          v-else
-          class="item-name"
-        >
-          Nenhum curso encontrado
-        </span>
+          <span
+            v-else
+            class="item-name"
+          >
+            <img
+              class="img-responsive"
+              src="@/assets/imgs/illustration-empty-state.png"
+              alt="search"
+            >
+            <h3>Don't know what to search?</h3>
+            <p>Here's an offer you can't refuse</p>
+          </span>
+        </div>
       </div>
 
       <div
@@ -48,47 +55,22 @@
         :key="item.imdbID"
         class="list-item d-flex justify-space-between align-center"
       >
-        <v-tooltip
-          v-if="hintColumnName"
-          bottom
+        <v-card
+          flat
+          tile
+          class="d-flex"
         >
-          <template v-slot:activator="{ on }">
-            <span
-              class="item-name"
-              v-on="on"
-            >
-              {{ item.Title }}
-            </span>
-          </template>
-
-          <span>{{ item[hintColumnName] }}</span>
-        </v-tooltip>
-
-        <span
-          v-else
-          class="item-name"
-        >
-          {{ item.Title }}
-          <b v-if="item.Type">
-            - {{ item.Type }}
-          </b>
-        </span>
-
-        <div class="item-actions d-flex align-center">
-          <v-btn
-            small
-            icon
-            color="primary"
+          <a
             :disabled="isDisabledItems"
             @click="itemDetail(item)"
           >
-            <v-icon
-              small
-            >
-              mdi-eye
-            </v-icon>
-          </v-btn>
-        </div>
+            <v-img
+              :src="creatorImage(item.Poster)"
+              aspect-ratio="1"
+              class="item-image grey lighten-2"
+            />
+          </a>
+        </v-card>
       </div>
     </div>
 

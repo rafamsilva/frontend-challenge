@@ -1,100 +1,38 @@
-# sagah.manager
+<img src="http://avaliacoesefetivas.com.br/logo.png" width="300">
 
-## Project setup
-```
-npm install
-```
+## Sobre o What's in
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+**Challenge desenvolvido por [Mislene Dalila](https://github.com/mislenedalila)**
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Este é um site de busca de filmes, desenvolvido como desafio no teste da Zup.
 
-### Lints and fixes files
-```
-npm run lint
-```
+### Passos para executar o projeto:
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-
-## Firebase Config
-
-### Follow the below instructions
-
-https://firebase.google.com/docs/cli?hl=pt-br#cli-ci-systems
-
-### Installing docker local machine
+1 - Execute o comando:
 
 ```
-docker run --name ubuntu1804 -p 9005:9005 -d -t ubuntu:18.04
+npm install/ yarn install
 ```
 
-```
-docker exec -it ubuntu1804 /bin/bash
-```
-
-### Inside docker you should install the following packages
+2 - Execute o comando:
 
 ```
-apt update
-apt install sudo -y
-apt install curl -y
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-apt -y install nodejs
-npm install -g firebase-tools
+npm start
 ```
 
-## Publishing with Firebase Hosting
+#### API:
 
-Follow those instructions to install firebase on your machine. https://firebase.google.com/docs/cli#cli-ci-systems
+Foi utilizado a API [OMDb API](http://www.omdbapi.com/).
 
-After you have installed firebase, keep following  the below instructions
+#### Tecnologias utilizadas:
 
-```
-firebase login:ci
-```
+* Vue.js
+* Vuetify
 
-Given a url, paste it on a WebBroser and login into your account
+#### Passos para busca:
 
-
-```
-Waiting for authentication...
-
-✔  Success! Use this token to login on a CI server:
-
-1//0hZMZPdgdZYp_CgYIARAAGBESNwF-L9IrxfttAPVin5-JLVafszIPAF6j8JKByZTQedKFXnGv6f_-SO8Bj2bKGYrTbN-tuLn1a10
-
-Example: firebase deploy --token "$FIREBASE_TOKEN"
-```
+* Busque por um filme - Ex:. Matrix - o campo título é o obrigatório;
+* Você pode filtrar por ano - o campo ano é o opcional;;
+* Você pode filtrar por categorias (Filme, Série e Episódio) - o campo tipo é o opcional;
 
 
-On Windows
-```
-SET FIREBASE_TOKEN=1//0hvwdxCCSz5e2CgYIARAAGBESNwF-L9IrwYbgGoRG0QzwLkKlrqXsplJz4EYjpecLHVgn3srIcex6Y_ZtjCbNnnEs0PddOoBYK64
-```
-
-On Linux/MacOS
-```
-export FIREBASE_TOKEN=1//0hvwdxCCSz5e2CgYIARAAGBESNwF-L9IrwYbgGoRG0QzwLkKlrqXsplJz4EYjpecLHVgn3srIcex6Y_ZtjCbNnnEs0PddOoBYK64
-```
-
-## Creating project via CLI
-
-go to https://console.firebase.google.com/u/0/project/_/hosting?pli=1 and create your new project
-
-
-```
-firebase init
-```
-
-
-```
-direbase deploy -m "COMMENT HERE"
-```

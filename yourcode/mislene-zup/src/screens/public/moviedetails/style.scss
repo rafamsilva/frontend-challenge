@@ -1,5 +1,5 @@
-div.container-page { height: 100%;
-  div.background-image { height: calc(100% - 185px); min-height: 540px; padding: 0;  background-color: $light; position: relative;
+div.container-page { height: 100%; background-color: #000;
+  div.background-image { height: calc(100% - 185px); padding: 0;  background-color: $light; position: relative;
     @media all and (min-width: 1024px) and (min-height: 1366px) { background-size: 100%; }
     @media all and (max-width: 768px) { padding: 10px 0; min-height: 440px; background-size: 100%; height: calc(100% - 145px); }
     @media all and (max-width: 321px) { min-height: 420px; }
@@ -8,14 +8,14 @@ div.container-page { height: 100%;
       @media all and (max-width: 1366px) and (max-height: 600px) { transform: translate(-50%, -70%); }
       @media all and (max-width: 768px) { width: 300px; }
 
-      h3.form-header { font-weight: bold; color: $primary; }
+      h3.form-header { color: $primary; }
 
       span.form-subheader { font-size: 14px;
         @media all and (min-width: 1020px) { font-size: 15px; }
         @media all and (max-width: 768px) { font-size: 12px; }
       }
 
-      div.form-input .v-label { color: $primary; font-weight: bold; }
+      div.form-input .v-label { color: $primary; }
 
       div.form-input {
         @media all and (max-width: 768px) { margin-top: 10px !important; }
@@ -33,5 +33,28 @@ div.container-page { height: 100%;
 
       button span.v-btn__content { color: $light; text-transform: capitalize; }
     }
+  }
+  div.info-time {
+    p { color: #8b93a6; font-size: 18px; font-weight: 600; }
+    span { background-color: #8b93a6; color: #000; padding: 3px 7px; border-radius: 5px; }
+  }
+  .theme--light.v-card { background-color: #000 !important; }
+  .tit-movie h3 { color: #fff; font-size: 60px; font-weight: 600; margin-bottom: 20px; }
+  .box-info p { color: #fff; }
+  .box-element { float: left; margin-right: 10px; display: block;
+    span.box-one { padding: 9px; background-color: #ff9f1c; color: #000; font-weight: 700; border-radius: 3px 0 0 3px; }
+    span.box-two { padding: 8px; border-radius: 0 3px 3px 0; border-top: 1px solid #666; border-right: 1px solid #666; border-bottom: 1px solid #666; }
+    span.box-three { padding: 9px 12px; background-color: #ff4040; color: #000; font-weight: 700; border-radius: 3px 0 0 3px; }
+    a.btn-add { background-color: #ff4040; padding: 9px 25px; border-radius: 3px; color: #fff; text-decoration: none; }
+    a.btn-add:hover { background-color: #ff9f1c; }
+    a img { width: 14%; }
+  }
+  .plot { margin: 40px 0; font-size: 18px;
+    h4 { color: #8b93a6; font-weight: 600; margin-bottom: 10px; }
+    p { color: #fff; font-weight: 300; }
+  }
+  .footer-info {
+    h4 { color: #8b93a6; font-weight: 600; margin-bottom: 10px; font-size: 18px; }
+    p { color: #fff; }
   }
 }

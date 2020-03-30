@@ -49,8 +49,8 @@ export default {
         this.actionGetByTitle(params)
           .then((response) => {
             this.isLoadingMovies = false
-            this.movies = response.data.Search
-            this.totalPages = Number(response.data.totalResults)
+            this.movies = response.data.Search || []
+            this.totalPages = isNaN(response.data.totalResults) ? 0 : Number(response.data.totalResults)
             console.log(this.movies)
           }).catch(() => {
             this.isLoadingMovies = false
