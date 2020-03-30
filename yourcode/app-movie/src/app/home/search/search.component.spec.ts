@@ -16,7 +16,7 @@ describe("SearchComponent", () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SearchComponent);
     component = fixture.componentInstance;
-    component.field = new FormControl("");
+    component.searchField = new FormControl("");
     fixture.detectChanges();
   });
 
