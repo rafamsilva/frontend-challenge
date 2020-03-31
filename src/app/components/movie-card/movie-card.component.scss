@@ -1,0 +1,14 @@
+@import "~bootstrap/scss/bootstrap-grid.scss";
+.movie-card {
+    border: none;   
+    img {
+        width: 100%;
+        @include media-breakpoint-up(sm) { height: 20vw; }
+        @include media-breakpoint-up(md) { height: 58vw; }
+        @include media-breakpoint-up(lg) { height: 40vw; }
+        @include media-breakpoint-up(xl) { height: 15vw; }
+        object-fit: cover;
+        border-radius: 3px;
+    }
+
+}

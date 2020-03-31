@@ -1,0 +1,19 @@
+<div class="container app-movie-list">
+    <div class="navbar-collapse searchbar-nav">
+        <app-search-bar (result)="createMovieList($event)" (searchErrorMessage)="handleError($event)"></app-search-bar>
+    </div> 
+
+    <div class="container text-center empty-state" *ngIf="!movieList || movieList.length <= 0">
+        <img class="img-fluid mx-auto" src="../../../assets/2.Illustrations/illustration-empty-state.png"/>
+        <h4>Don't know what to search?</h4>
+        <p>Here's an offer you can't refuse.</p>
+    </div>
+
+        <div class="row">
+            <ng-container *ngFor="let movie of movieList">
+                <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 mt-5">
+                    <app-movie-card [movie]="movie"></app-movie-card>
+                </div>
+            </ng-container>
+        </div>
+</div> 
