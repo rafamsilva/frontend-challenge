@@ -13,13 +13,15 @@ import { HttpClientModule }    from '@angular/common/http';
 import { MovieService } from './services/movie.service';
 import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { MovieCardComponent } from './components/movie-card/movie-card.component';
+import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchBarComponent,
     MovieListComponent,
-    MovieCardComponent
+    MovieCardComponent,
+    MovieDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -15,4 +15,10 @@ export class MovieCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  resolvePoster(movie: Movie) {
+    return movie.Poster != "N/A"? movie.Poster : defaultImgPath;
+  }
+
 }
+
+export const defaultImgPath= '../../../assets/2.Illustrations/Noimage.png';

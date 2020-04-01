@@ -1,3 +1,8 @@
 <div class="card movie-card">
-    <img alt="Card image cap" class="card-img" [src]="movie.Poster">
+    <img alt="Card image cap" class="card-img" [src]="resolvePoster(movie)">
+    <div class="card-img-overlay d-flex flex-column align-items-start justify-content-end">
+        <span class="heart-icon"></span>
+        <p class="card-text movie-title mb-1">{{movie.Title}}</p>
+        <p class="card-text movie-year mb-1">{{movie.Year}}</p>
+    </div>
 </div>
