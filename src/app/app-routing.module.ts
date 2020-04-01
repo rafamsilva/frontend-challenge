@@ -6,7 +6,7 @@ import { MovieDetailComponent } from './components/movie-detail/movie-detail.com
 
 const routes: Routes = [
   {path:'', component:MovieListComponent},
-  {path: 'movie/:imdbID', component: MovieDetailComponent},
+  {path: 'movie/:imdbID', component: MovieDetailComponent },
 ];
 
 @NgModule({

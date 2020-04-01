@@ -12,7 +12,10 @@
         <div class="row">
             <ng-container *ngFor="let movie of movieList">
                 <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 mt-5">
-                    <app-movie-card [movie]="movie" [routerLink]="['movie', movie.imdbID]"></app-movie-card>
+                    <app-movie-card 
+                    [movie]="movie" 
+                    [routerLink]="['movie', movie.imdbID]">
+                    </app-movie-card>
                 </div>
             </ng-container>
         </div>

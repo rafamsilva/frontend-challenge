@@ -1,1 +1,75 @@
-<p>movie-detail works!</p>
+<div class="container movie-detail">
+    <div class="row d-flex d-lg-block">
+        <div *ngIf="isLoading" class="d-flex loading-app justify-content-center align-content-center">
+            <app-loading width="10em" height="10em"></app-loading>
+        </div>
+        <div *ngIf="!isLoading" class="col-lg-6 order-0 float-left">
+            <div class="d-flex justify-content-left">
+                <span role="button" aria-hidden="true" class="back-arrow"></span>
+            </div>
+            <div class="d-flex justify-content-start">
+                <p class="movie-info">{{movie.Runtime}} · {{movie.Year}} ·
+                    <span class="badge badge-secondary movie-rating">
+                        {{movie.Rated}}
+                    </span>
+                </p>
+            </div>
+            <div class="d-flex justify-content-left">
+                <h1>{{movie.Title}}</h1>
+            </div>
+            <div class="d-flex justify-content-left movie-buttons">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-warning imdb-button"></button>
+                    <button type="button" class="btn btn-outline-secondary imdb-rating">{{movie.imdbRating}}/10</button>
+                </div>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-danger rotten-button"></button>
+                    <button type="button" class="btn btn-outline-secondary imdb-rating">{{getRottenRating(movie)}}</button>
+                </div>
+
+                <button 
+                [ngClass]="
+                {'btn': true, 
+                'btn-outline-secondary': !isFavourite, 
+                'btn-danger': isFavourite, 
+                'heart-button': !isFavourite,
+                'heart-button-full': isFavourite}" 
+                (click)="addFavourite(movie)">
+                    {{isFavourite? 'Added' : 'Add to favourites'}}
+                </button>
+            </div>
+            <div class="d-flex justify-content-start movie-plot-label-div">
+                <p class="movie-plot-label">Plot</p>
+            </div>
+            <div class="d-flex justify-content-start">
+                <p class="">{{movie.Plot}}</p>
+            </div>
+            <div class="d-flex justify-content-start">
+                <div class="d-flex flex-column col-4 align-content-start first-info-bottom">
+                    <span class="movie-info info-label-bottom"> Cast</span>
+                    <ng-container *ngFor="let actor of getActorsList(movie)">
+                        <p class="movie-info-bottom">{{actor}}</p>
+                    </ng-container>
+                </div>
+                <div class="d-flex flex-column col-4 align-content-start">
+                    <span class="movie-info info-label-bottom"> Genre</span>
+                    <ng-container *ngFor="let genre of getGenreList(movie)">
+                        <p class="movie-info-bottom">{{genre}}</p>
+                    </ng-container>
+                </div>
+                <div class="d-flex flex-column col-4 align-content-start">
+                    <span class="movie-info info-label-bottom"> Director</span>
+                    <ng-container *ngFor="let director of getDirectorList(movie)">
+                            <p class="movie-info-bottom">{{director}}</p>
+                        </ng-container>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="col-lg-6 order-0 float-left">
+            B
+        </div> -->
+        <div *ngIf="!isLoading" class="col-lg-6 order-1 float-left">
+            <app-movie-card [movie]="movie"></app-movie-card>
+        </div>
+    </div>
+</div>

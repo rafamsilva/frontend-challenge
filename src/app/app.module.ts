@@ -14,6 +14,7 @@ import { MovieService } from './services/movie.service';
 import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { MovieCardComponent } from './components/movie-card/movie-card.component';
 import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MovieDetailComponent } from './components/movie-detail/movie-detail.com
     SearchBarComponent,
     MovieListComponent,
     MovieCardComponent,
-    MovieDetailComponent
+    MovieDetailComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

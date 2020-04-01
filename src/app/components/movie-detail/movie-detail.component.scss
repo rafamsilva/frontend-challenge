@@ -1,0 +1,89 @@
+.movie-detail {
+
+    color: white;
+
+    .back-arrow {
+        mask: url('../../../assets/1.Icons/icon-arrow-white.svg');
+        mask-size: cover;
+        width: 1.7em;
+        height: 1.7em;
+        background-color: white;
+        margin-bottom: 15px;
+    }
+
+    .btn { border-color: #353F4C; cursor: pointer; }
+
+    .imdb-icon {
+        mask: url('../../../assets/2.Logos/logo-imdb.svg');
+        mask-size: cover;
+        width: 1.3em;
+        height: 1.3em;
+        background-color: #0A1014;
+    }
+
+    .imdb-button {
+        padding: 12px 16px;
+        font-size: 16px;
+    }
+
+    .rotten-button {
+        padding: 8px 12px;
+        font-size: 16px;
+        margin-left: 1em;
+    }
+
+    .movie-buttons { margin-top: 10px; }
+
+    .movie-info { color: #7A8C99; }
+
+    .movie-plot-label {
+        color: #7A8C99;
+        margin-bottom: 3px;
+        margin-top: 48px;
+    }
+
+    .heart-button, .heart-button-full {
+        margin-left: 1em;
+        cursor: pointer;
+    }
+
+    .imdb-rating {
+        border-left: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    .imdb-button:before { content: url('../../../assets/2.Logos/logo-imdb.svg'); }
+
+    .rotten-button:before { content: url('../../../assets/2.Logos/logo-rotten-tomatoes.svg'); }
+
+    .heart-button:before {
+        content: url('../../../assets/1.Icons/icon-heart-white.svg');
+        float: left;
+        width: 20px;
+        position: relative;
+        top: 1px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    .heart-button-full:before {
+        content: url('../../../assets/1.Icons/icon-heart-full.svg');
+        float: left;
+        width: 20px;
+        position: relative;
+        top: 1px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    .movie-rating {
+        color: #0A1014;
+        line-height: 2;
+    }
+
+    .movie-info-bottom { margin-bottom: 0px; }
+    .first-info-bottom { padding-left: 0px; }
+    .info-label-bottom { margin-bottom: 8px; }
+
+}
