@@ -7,5 +7,5 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'mariofonteles-fronted-challenge';
+  
 }

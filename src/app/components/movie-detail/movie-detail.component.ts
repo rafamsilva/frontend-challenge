@@ -30,8 +30,9 @@ export class MovieDetailComponent implements OnInit {
   }
 
   addFavourite(movie: Movie) {
-    this.isFavourite = true;
-    this.movieService.saveFavourite(movie.imdbID);
+    this.isFavourite = !this.isFavourite;
+    this.isFavourite == true? 
+      this.movieService.saveFavourite(movie.imdbID) : this.movieService.deleteFavourite(movie.imdbID)
   }
 
   getRottenRating(movie: Movie) {

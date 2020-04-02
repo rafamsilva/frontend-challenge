@@ -1,24 +1,50 @@
 <div class="container app-movie-list">
+    <!-- Search Bar Component -->
     <div class="navbar-collapse searchbar-nav">
-        <app-search-bar (result)="createMovieList($event)" (searchErrorMessage)="handleError($event)"></app-search-bar>
+        <app-search-bar 
+        (searchTerm)="saveSearchTerm($event)" 
+        (result)="createMovieList($event)" 
+        (searchErrorMessage)="handleError($event)">
+        </app-search-bar>
     </div> 
-
-    <div class="container text-center empty-state" *ngIf="!movieList || movieList.length <= 0">
+    <!-- Empty searchbox -->
+    <div 
+    class="container text-center empty-state" 
+    *ngIf=" !isLoading && !(pageError || errorTooMany) && (!movieList || movieList.length <= 0)">
         <img class="img-fluid mx-auto" src="../../../assets/2.Illustrations/illustration-empty-state.png"/>
         <h4>Don't know what to search?</h4>
         <p>Here's an offer you can't refuse</p>
     </div>
+    <!-- Infinite Scrolling movie list -->
+    <div 
+    infiniteScroll
+    [infiniteScrollDistance]="1"
+    [infiniteScrollThrottle]="500"
+    (scrolled)="onScroll()"
+    class="row" 
+    *ngIf="!pageError && movieList && movieList.length > 0">
+        <ng-container *ngFor="let movie of movieList">
+            <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 mt-5">
+                <!-- Movie Card component -->
+                <app-movie-card 
+                [movie]="movie" 
+                [routerLink]="['movie', movie.imdbID]">
+                </app-movie-card>
+            </div>
+        </ng-container>
+    </div>
+    <!-- Movie Not Found error when scrolling -->
+    <div class="container text-center empty-state" *ngIf="pageError">
+        <h4>Oops!</h4>
+        <p>Something went wrong. Try again...</p>
+    </div>
+    <!-- Too Many Results error when searching -->
+    <div class="container text-center empty-state" *ngIf="errorTooMany">
+        <p>Type at least 3 letters to get started...</p>
+    </div>
+    <!-- Loading -->
+    <div *ngIf="isLoading" class="d-flex loading-app justify-content-center align-content-center">
+        <app-loading width="10em" height="10em"></app-loading>
+    </div>
 
-        <div class="row">
-            <ng-container *ngFor="let movie of movieList">
-                <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 mt-5">
-                    <app-movie-card 
-                    [movie]="movie" 
-                    [routerLink]="['movie', movie.imdbID]">
-                    </app-movie-card>
-                </div>
-            </ng-container>
-        </div>
-
-        <!-- TO-DO: Additional divs for search errors and loading -->
 </div> 

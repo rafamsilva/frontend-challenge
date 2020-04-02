@@ -11,13 +11,15 @@ export class SearchBarComponent implements OnInit {
   constructor(private movieService: MovieService) { }
 
   searchText: string;
+  @Output() searchTerm = new EventEmitter<any>();
   @Output() result = new EventEmitter<any>();
   @Output() searchErrorMessage = new EventEmitter<Error>();
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   onChange(title: string) {
+    //Starts search on every key press
+    this.searchTerm.emit(title);
     this.movieService.getMovies(title)
       .then( result => this.result.emit(result),(err) => this.searchErrorMessage.emit(err));
   }

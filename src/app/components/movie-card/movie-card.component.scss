@@ -3,9 +3,10 @@
 .movie-card {
     border: none;   
     background-color: black;
-    transition:all 0.3s ease-in-out;
+    transition:all 0.2s ease-in-out;
     margin-left: auto;
     margin-right: auto;
+    cursor: pointer;
     .card-img {
         width: 100%;
         @include media-breakpoint-up(sm) { height: 20vw; }
@@ -14,7 +15,7 @@
         @include media-breakpoint-up(xl) { height: 15vw; }
         object-fit: cover;
         border-radius: 3px;
-        transition:all 0.3s ease-in-out;
+        transition:all 0.2s ease-in-out;
         opacity:1;
     }
 
@@ -26,7 +27,7 @@
         @include media-breakpoint-up(xl) { height: 37vw; }
         object-fit: cover;
         border-radius: 3px;
-        transition:all 0.3s ease-in-out;
+        transition:all 0.2s ease-in-out;
         opacity:1;
     }
 }
@@ -41,11 +42,11 @@
     color:#FFFFFF;
 }
 
-.card-img-overlay>h4, .card-img-overlay>p, .card-img-overlay>span{
+.card-img-overlay>h4, .card-img-overlay>p, .card-img-overlay>.heart-icon{
     visibility:hidden;
 }
 
-.card-img-overlay:hover h4, .card-img-overlay:hover p, .card-img-overlay:hover span{
+.card-img-overlay:hover h4, .card-img-overlay:hover p, .card-img-overlay:hover .heart-icon{
     visibility: visible;
 }
 
@@ -69,6 +70,18 @@
     top: 10px;
     right: 10px;
     mask: url('../../../assets/1.Icons/icon-heart-grey.svg');
+    mask-size: cover;
+    width: 1.7em;
+    height: 1.7em;
+    display:inline-block;
+}
+
+.card .card-img-overlay .heart-icon-full {
+    background: white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    mask: url('../../../assets/1.Icons/icon-heart-full.svg');
     mask-size: cover;
     width: 1.7em;
     height: 1.7em;

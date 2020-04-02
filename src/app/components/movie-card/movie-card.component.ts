@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Movie } from 'src/app/models/movie';
 import { Router } from '@angular/router';
+import { MovieService } from 'src/app/services/movie.service';
 
 @Component({
   selector: 'app-movie-card',
@@ -10,23 +11,28 @@ import { Router } from '@angular/router';
 export class MovieCardComponent implements OnInit {
 
   @Input('movie') movie: Movie;
+  isFavorited: boolean = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private movieService: MovieService) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
-  resolvePoster(movie: Movie) {
+  resolvePoster(movie: Movie, event?) {
+    if(event) 
+      return event.target.src = defaultImgPath;
     return movie.Poster != "N/A"? movie.Poster : defaultImgPath;
   }
 
   cardWidth() {
-    console.log(this.router.url);
     return this.isSearching()? '100%' : '70%';
   }
 
   isSearching() {
     return this.router.url == '/';
+  }
+
+  checkIfFavorite() {
+    return this.isFavorited = this.movieService.isFavourite(this.movie.imdbID);
   }
 
 }

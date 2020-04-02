@@ -1,7 +1,9 @@
 <div class="card movie-card" [ngStyle]="{'width': cardWidth()}">
-    <img alt="Card image cap" [ngClass]="isSearching()? 'card-img' : 'card-img-detail'" [src]="resolvePoster(movie)">
+    <img 
+    [ngClass]="isSearching()? 'card-img' : 'card-img-detail'" 
+    [src]="resolvePoster(movie)" (error)="resolvePoster(movie, $event)">
     <div class="card-img-overlay d-flex flex-column align-items-start justify-content-end">
-        <span class="heart-icon"></span>
+        <span [ngClass]="checkIfFavorite()? 'heart-icon-full' : 'heart-icon'"></span>
         <p class="card-text movie-title mb-1">{{movie.Title}}</p>
         <p class="card-text movie-year mb-1">{{movie.Year}}</p>
     </div>
