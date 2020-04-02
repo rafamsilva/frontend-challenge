@@ -1,4 +1,4 @@
-<img src="https://www.kaszek.com/wp-content/uploads/2016/03/logo-1.jpg" width="300">
+<img src="https://uploads-ssl.webflow.com/5cac6236f8d44ddee118d97c/5e666d594f66c9c1e9c3ce74_LogoRGB2.png" width="300">
 
 ## Sobre o challenge
 
