@@ -1,21 +1,21 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Movie } from 'src/app/models/movie';
 import { Router } from '@angular/router';
 import { MovieService } from 'src/app/services/movie.service';
+import { LoadingComponent } from '../loading/loading.component';
 
 @Component({
   selector: 'app-movie-card',
   templateUrl: './movie-card.component.html',
   styleUrls: ['./movie-card.component.scss']
 })
-export class MovieCardComponent implements OnInit {
+export class MovieCardComponent {
 
-  @Input('movie') movie: Movie;
+  @Input('movie') movie: Movie = new Movie();
   isFavorited: boolean = false;
+  isLoading: boolean = true;
 
   constructor(private router: Router, private movieService: MovieService) { }
-
-  ngOnInit(): void { }
 
   resolvePoster(movie: Movie, event?) {
     if(event) 
@@ -33,6 +33,10 @@ export class MovieCardComponent implements OnInit {
 
   checkIfFavorite() {
     return this.isFavorited = this.movieService.isFavourite(this.movie.imdbID);
+  }
+
+  endLoading() {
+    this.isLoading = false;
   }
 
 }

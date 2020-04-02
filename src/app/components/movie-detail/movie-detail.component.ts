@@ -3,6 +3,7 @@ import { Movie } from 'src/app/models/movie';
 import { ActivatedRoute, Params } from '@angular/router';
 import { MovieService } from 'src/app/services/movie.service';
 import { MovieCardComponent } from 'src/app/components/movie-card/movie-card.component';
+
 @Component({
   selector: 'app-movie-detail',
   templateUrl: './movie-detail.component.html',
@@ -13,14 +14,14 @@ export class MovieDetailComponent implements OnInit {
   movie: Movie = new Movie();
   isFavourite: boolean = false;
   isLoading: boolean = true;
+  pageError: boolean = false;
 
   constructor(private activatedRoute: ActivatedRoute, private movieService: MovieService) { }
 
   ngOnInit() {
-    this.activatedRoute.paramMap.subscribe( params => {
-      this.movieService.getMovieById(params.get('imdbID'))
-      .then( (movie: Movie) => { this.createMovie(movie)} , err => this.handleNotFound())
-    });
+    let imdbID = this.activatedRoute.snapshot.paramMap.get('imdbID');
+    this.movieService.getMovieById(imdbID)
+      .then( (movie: Movie) => { this.createMovie(movie)} , () => this.handleNotFound());
   }
 
   createMovie(movie: Movie) {
@@ -36,7 +37,8 @@ export class MovieDetailComponent implements OnInit {
   }
 
   getRottenRating(movie: Movie) {
-    return movie.Ratings.find( rating => rating.Source == "Rotten Tomatoes").Value
+    let rating = movie.Ratings.find( rating => rating && rating.Source == "Rotten Tomatoes");
+    return rating? rating.Value : 'N/A';
   }
 
   getActorsList(movie: Movie) {
@@ -48,11 +50,12 @@ export class MovieDetailComponent implements OnInit {
   }
 
   getDirectorList(movie: Movie) {
-    return movie.Director.split(", ")
+    return movie.Director.split(", ");
   }
 
   handleNotFound() {
-    //TO-DO
+    this.pageError = true;
+    this.isLoading = false;
   }
 
 }

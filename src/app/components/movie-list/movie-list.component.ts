@@ -16,8 +16,8 @@ export class MovieListComponent implements OnInit {
   currentPage: number = 1;
   isLoadingScroll = false;
   isLoading = false;
-  pageError: any;
-  errorTooMany: any;
+  pageError: any = false;
+  errorTooMany: any = false;
 
   constructor(private movieService: MovieService) { }
 
@@ -36,6 +36,8 @@ export class MovieListComponent implements OnInit {
     this.errorTooMany = false;
     this.isLoading = true;
     this.currentPage = 1;
+    if(this.searchTerm.length == 0)
+      this.movieList = [];
   }
 
   onScroll() {
@@ -48,7 +50,11 @@ export class MovieListComponent implements OnInit {
         console.log(this.currentPage);
         this.isLoadingScroll = false;
         this.movieList = this.movieList.concat(moviesToAdd);
-      }, err => {this.isLoadingScroll = false; this.isLoading = false;})
+      })
+      .catch(() =>{
+        this.isLoadingScroll = false; 
+        this.isLoading = false;
+      });
   }
 
   handleError(error: Error) {

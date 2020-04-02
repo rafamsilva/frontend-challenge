@@ -2,11 +2,19 @@
 
 .movie-card {
     border: none;   
-    background-color: black;
+    background-color: #1a1c1b;
     transition:all 0.2s ease-in-out;
     margin-left: auto;
     margin-right: auto;
     cursor: pointer;
+
+    .card-list-loading {
+        position: absolute; 
+        left: 50%;
+        margin-left: -60px;
+        top: 50%;
+        margin-top: -50px;
+    }
     .card-img {
         width: 100%;
         @include media-breakpoint-up(sm) { height: 20vw; }
