@@ -15,11 +15,14 @@ describe('MovieDetailComponent', () => {
       declarations: [ MovieDetailComponent ],
       imports: [HttpClientModule, RouterModule],
       providers: [
-        { provide: ActivatedRoute, useValue: { snapshot: { paramMap: { get: () => 1 } } } },
+        { provide: ActivatedRoute, useValue: { snapshot: { paramMap: { get: () => 'tt2015381' } } } },
         MovieService
       ],
     })
-    .compileComponents();
+    .compileComponents().then(() => {
+      fixture = TestBed.createComponent(MovieDetailComponent);
+      
+    });
   }));
 
   beforeEach(() => {
@@ -30,6 +33,13 @@ describe('MovieDetailComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it("should render movie", async (done) => { 
+    spyOn(component, "createMovie").and.returnValue(Promise.resolve(true));
+    await component.ngOnInit();
+    expect(component.createMovie).toHaveBeenCalled();
+    done();
   });
 });
 

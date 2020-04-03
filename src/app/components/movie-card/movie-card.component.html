@@ -1,4 +1,5 @@
 <div class="card movie-card" [ngStyle]="{'width': cardWidth()}">
+    <!-- Loading component for movie cards -->
     <div class="d-none d-sm-block">
         <app-loading 
         *ngIf="isLoading" 
@@ -6,11 +7,13 @@
         width="8em" 
         height="8em" class="card-list-loading"></app-loading>
     </div>
+    <!-- Movie poster -->
     <img 
     [ngClass]="isSearching()? 'card-img' : 'card-img-detail'" 
     [src]="resolvePoster(movie)" (load)="endLoading()"  (error)="resolvePoster(movie, $event)">
+    <!-- Movie card info -->
     <div class="card-img-overlay d-flex flex-column align-items-start justify-content-end">
-        <span [ngClass]="checkIfFavorite()? 'heart-icon-full' : 'heart-icon'"></span>
+        <span (click)="handleFavourite(movie.imdbID, $event)" [ngClass]="checkIfFavorite()? 'heart-icon-full' : 'heart-icon'"></span>
         <p class="card-text movie-title mb-1">{{movie.Title}}</p>
         <p class="card-text movie-year mb-1">{{movie.Year}}</p>
     </div>

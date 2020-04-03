@@ -1,27 +1,38 @@
-# MariofontelesFrontedChallenge
+# Frontend Challenge - Mário Fonteles
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
+Projeto realizado para a vaga de Dev Frontend Angular na Zup. O projeto foi desenvolvido utilizando o Angular 9 na sua release mais estável.
 
-## Development server
+## Como rodar o projeto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Instalar dependências:
 
-## Code scaffolding
+```
+npm install
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Iniciar servidor de desenvolvimento:
+```
+ng serve
+```
 
-## Build
+O app estará disponível na url `http://localhost:4200/`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Rodando testes unitários
 
-## Running unit tests
+Os testes unitários nesse projeto foram feitos com [Karma](https://karma-runner.github.io) e [Jasmine](https://jasmine.github.io/).
+ O comando `ng test` irá executar os testes.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Project overview
 
-## Running end-to-end tests
+O desafio foi concluído utilizando o Angular 9 no seu release estável mais recente.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Algumas features do projeto:
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* Design responsivo utilizando Bootstrap 4 e SCSS
+* Implementação de Infinite Scroll na listagem dos filmes
+* Persistência simples dos filmes favoritados utilizando localStorage
+* Cenários de estado vazio e tratamento de erros da API foram implementados
+* Componente de loading implementado para as telas e alguns componentes
+* Teste unitários implementados
+* projeto concluído em 3 dias(iniciado na terça 31/03, concluído na quinta 02/04)
+* Inicialente optei por não utilizar lazy-loading e shared modules dado o escopo do projeto, gostaria de ter tido tempo de implementar, mas preferi manter minha deadline para o dia 02/04

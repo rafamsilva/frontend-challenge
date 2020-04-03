@@ -36,18 +36,19 @@ export class MovieListComponent implements OnInit {
     this.errorTooMany = false;
     this.isLoading = true;
     this.currentPage = 1;
-    if(this.searchTerm.length == 0)
-      this.movieList = [];
+    if(this.searchTerm.length <= 0) {
+      this.movieList = []; 
+      this.errorTooMany = false;
+    }
   }
 
   onScroll() {
+    //onScroll event activates to search for more movies
     this.isLoadingScroll = true;
     this.currentPage = this.currentPage+1;
     this.movieService.getMovies(this.searchTerm, (this.currentPage).toString())
       .then( result => {
         let moviesToAdd: Movie[] = result;
-        console.log(moviesToAdd)
-        console.log(this.currentPage);
         this.isLoadingScroll = false;
         this.movieList = this.movieList.concat(moviesToAdd);
       })

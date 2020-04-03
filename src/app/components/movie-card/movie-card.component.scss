@@ -82,7 +82,12 @@
     width: 1.7em;
     height: 1.7em;
     display:inline-block;
+
+    &:hover{
+        background: #7A8C99;
+    }
 }
+
 
 .card .card-img-overlay .heart-icon-full {
     background: white;

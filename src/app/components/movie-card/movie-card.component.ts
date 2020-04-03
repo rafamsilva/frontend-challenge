@@ -39,6 +39,13 @@ export class MovieCardComponent {
     this.isLoading = false;
   }
 
+  handleFavourite(imdbID, event: Event) {
+    event.stopPropagation();
+    this.isFavorited = !this.isFavorited;
+    this.isFavorited == true? 
+      this.movieService.saveFavourite(imdbID) : this.movieService.deleteFavourite(imdbID)
+  }
+
 }
 
 export const defaultImgPath= '../../../assets/2.Illustrations/Noimage.png';

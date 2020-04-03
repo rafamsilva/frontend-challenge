@@ -18,16 +18,16 @@ export class MovieDetailComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute, private movieService: MovieService) { }
 
-  ngOnInit() {
+  async ngOnInit() {
     let imdbID = this.activatedRoute.snapshot.paramMap.get('imdbID');
-    this.movieService.getMovieById(imdbID)
-      .then( (movie: Movie) => { this.createMovie(movie)} , () => this.handleNotFound());
+    return this.movieService.getMovieById(imdbID)
+      .then( (movie: Movie) => this.createMovie(movie) , () => this.handleNotFound());
   }
 
-  createMovie(movie: Movie) {
+  async createMovie(movie: Movie) {
     this.movie = movie;
     this.isFavourite = this.movieService.isFavourite(movie.imdbID);
-    this.isLoading = false;
+    return this.isLoading = false;
   }
 
   addFavourite(movie: Movie) {

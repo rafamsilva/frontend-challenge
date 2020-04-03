@@ -10,9 +10,10 @@
             <p>Something went wrong. Try again...</p>
         </div>
         <!-- movie details -->
+        <!-- using a mix of flexbox, grid and floats to create a responsive layout for small devices -->
         <div *ngIf="!isLoading && !pageError" class="col-lg-6 order-0 float-left">
             <div class="d-flex justify-content-left">
-                <span role="button" [routerLink]="['']" aria-hidden="true" class="back-arrow"></span>
+                <span role="button" [routerLink]="['']" aria-hidden="true" class="back-arrow btn btn-outline-primary"></span>
             </div>
             <div class="d-flex justify-content-start">
                 <p class="movie-info">{{movie.Runtime}} · {{movie.Year}} ·
@@ -24,18 +25,18 @@
             <div class="d-flex justify-content-left">
                 <h1>{{movie.Title}}</h1>
             </div>
+            <!-- Buttons -->
             <div class="d-flex justify-content-left movie-buttons">
-                <div class="btn-group" role="group" aria-label="Basic example">
+                <div class="btn-group" role="group">
                     <button type="button" class="btn btn-warning imdb-button"></button>
                     <button type="button" class="btn btn-outline-secondary imdb-rating">
-                        {{movie.imdbRating}} {{movie.imdbRating == 'N/A'? '' : '/10'}}
+                        {{movie.imdbRating}}{{movie.imdbRating == 'N/A'? '' : '/10'}}
                     </button>
                 </div>
-                <div class="btn-group" role="group" aria-label="Basic example">
+                <div class="btn-group" role="group">
                     <button type="button" class="btn btn-danger rotten-button"></button>
                     <button type="button" class="btn btn-outline-secondary imdb-rating">{{getRottenRating(movie)}}</button>
                 </div>
-
                 <button 
                 [ngClass]="
                 {'btn': true, 
@@ -47,12 +48,14 @@
                     {{isFavourite? 'Added' : 'Add to favourites'}}
                 </button>
             </div>
+            <!-- Plot -->
             <div class="d-flex justify-content-start movie-plot-label-div">
                 <p class="movie-plot-label">Plot</p>
             </div>
             <div class="d-flex justify-content-start">
-                <p class="">{{movie.Plot}}</p>
+                <p>{{movie.Plot}}</p>
             </div>
+            <!-- Cast, Genres, Directors -->
             <div class="d-flex justify-content-start">
                 <div class="d-flex flex-column col-4 align-content-start first-info-bottom">
                     <span class="movie-info info-label-bottom"> Cast</span>

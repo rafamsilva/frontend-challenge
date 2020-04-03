@@ -1,0 +1,28 @@
+.search-bar {
+    .search-icon {
+        mask: url('../../../assets/1.Icons/icon-magnifier-grey.svg');
+        mask-size: cover;
+        width: 1em;
+        height: 1em;
+        background-color: #7A8C99;
+        cursor: pointer;
+        position: absolute;
+        top: 11px;
+        left: 8px;
+        z-index: 9999;
+        display: block;
+        line-height: 2.375rem;
+        text-align: center;
+        pointer-events: none;
+    }
+
+    .form-control {
+        padding-left: 2.3rem;
+        border-bottom-left-radius: .25rem;
+        border-top-left-radius: .25rem;
+        border: none;
+    }
+}
+
+
+    

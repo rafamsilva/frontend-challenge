@@ -13,6 +13,10 @@
         cursor: pointer;
     }
 
+    .back-arrow:hover {
+        background-color: #FFFF;
+    }
+
     .btn { border-color: #353F4C; cursor: pointer; }
 
     .imdb-icon {
@@ -34,10 +38,6 @@
         margin-left: 1em;
     }
 
-    .movie-buttons { margin-top: 10px; }
-
-    .movie-info { color: #7A8C99; }
-
     .movie-plot-label {
         color: #7A8C99;
         margin-bottom: 3px;
@@ -55,9 +55,13 @@
         cursor: pointer;
     }
 
-    .imdb-button:before { content: url('../../../assets/2.Logos/logo-imdb.svg'); }
+    .imdb-button:before { 
+        content: url('../../../assets/2.Logos/logo-imdb.svg'); 
+    }
 
-    .rotten-button:before { content: url('../../../assets/2.Logos/logo-rotten-tomatoes.svg'); }
+    .rotten-button:before { 
+        content: url('../../../assets/2.Logos/logo-rotten-tomatoes.svg');
+     }
 
     .heart-button:before {
         content: url('../../../assets/1.Icons/icon-heart-white.svg');
@@ -82,10 +86,13 @@
     .movie-rating {
         color: #0A1014;
         line-height: 2;
+        min-width: 2em;
     }
 
     .movie-info-bottom { margin-bottom: 0px; }
     .first-info-bottom { padding-left: 0px; }
     .info-label-bottom { margin-bottom: 8px; }
+    .movie-buttons { margin-top: 10px; }
+    .movie-info { color: #7A8C99; }
 
 }
