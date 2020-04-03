@@ -4,6 +4,8 @@ Projeto realizado para a vaga de Dev Frontend Angular na Zup. O projeto foi dese
 
 ## Como rodar o projeto
 
+Primeiramente certifique-se de ter o Node.js, o npm e o Angular CLI instalados e atualizados na versão mais recente.
+
 Instalar dependências:
 
 ```
@@ -16,6 +18,12 @@ ng serve
 ```
 
 O app estará disponível na url `http://localhost:4200/`.
+
+Para gerar build:
+
+```
+ng build
+```
 
 ## Rodando testes unitários
 
@@ -34,5 +42,6 @@ Algumas features do projeto:
 * Cenários de estado vazio e tratamento de erros da API foram implementados
 * Componente de loading implementado para as telas e alguns componentes
 * Teste unitários implementados
-* projeto concluído em 3 dias(iniciado na terça 31/03, concluído na quinta 02/04)
-* Inicialente optei por não utilizar lazy-loading e shared modules dado o escopo do projeto, gostaria de ter tido tempo de implementar, mas preferi manter minha deadline para o dia 02/04
+* Adicionei algumas animações CSS3 interessantes 
+* Concluído em 3 dias(iniciado na terça 31/03, concluído na quinta 02/04)
+* Inicialmente optei por não utilizar lazy-loading e shared modules dado o escopo simples do App, talvez com mais tempo implementasse, mas preferi manter minha deadline para o dia 02/04

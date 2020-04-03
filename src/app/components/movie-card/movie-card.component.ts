@@ -43,7 +43,7 @@ export class MovieCardComponent {
     event.stopPropagation();
     this.isFavorited = !this.isFavorited;
     this.isFavorited == true? 
-      this.movieService.saveFavourite(imdbID) : this.movieService.deleteFavourite(imdbID)
+      this.movieService.saveFavourite(imdbID) : this.movieService.deleteFavourite(imdbID);
   }
 
 }

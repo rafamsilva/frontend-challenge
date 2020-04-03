@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { MovieListComponent } from './movie-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MovieService } from 'src/app/services/movie.service';

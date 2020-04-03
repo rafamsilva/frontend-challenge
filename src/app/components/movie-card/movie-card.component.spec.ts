@@ -1,9 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { MovieCardComponent } from './movie-card.component';
 import { MovieService } from 'src/app/services/movie.service';
 import { HttpClientModule } from '@angular/common/http';
-import { Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 
 describe('MovieCardComponent', () => {

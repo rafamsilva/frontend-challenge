@@ -4,7 +4,6 @@ import { MovieDetailComponent } from './movie-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MovieService } from 'src/app/services/movie.service';
 import { RouterModule, ActivatedRoute } from '@angular/router';
-import { of } from 'rxjs';
 
 describe('MovieDetailComponent', () => {
   let component: MovieDetailComponent;

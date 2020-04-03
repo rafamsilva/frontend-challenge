@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { SearchBarComponent } from './search-bar.component';
 import { MovieService } from 'src/app/services/movie.service';
 import { HttpClientModule } from '@angular/common/http';
