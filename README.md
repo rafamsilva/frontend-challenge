@@ -36,7 +36,7 @@ A proposta deste desafio é para avaliar seu HTML, CSS, Javascript, conhecimento
 * Prefira o uso de metodologias css. Ignore o descrito caso opte por utilizar CSS-IN-JS;
 * Fazer perguntas é bom. Não vamos te penalizar por fazer perguntar;
 * A API as vezes pode demorar em nos responder, pense em loading e estado vazio da sua aplicação;
-* Estamos procurando por sinais do seu entendimento de alguns conceitos como, enventos, promises, ciclos de vida e como você aplica e implementa isto em Javascript;
+* Estamos procurando por sinais do seu entendimento de alguns conceitos como, eventos, promises, ciclos de vida e como você aplica e implementa isso em Javascript;
 * Testes unitários serão bem valorizados;
 * Histórico no git serão bem valorizados;
 * Seu código será avaliado por: semântica, estrutura, legibilidade, tamanho, elegância (entre outros fatores);
