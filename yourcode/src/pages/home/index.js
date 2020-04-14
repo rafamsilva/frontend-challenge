@@ -10,7 +10,7 @@ export default function HomePage() {
     <Wrapper>
       <Header />
 
-      <MoviesContainer movies={[]} />
+      <MoviesContainer />
     </Wrapper>
   );
 }

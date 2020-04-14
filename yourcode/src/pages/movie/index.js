@@ -23,7 +23,6 @@ export default function MoviePage() {
   const dispatch = useDispatch();
 
   const { id } = useParams();
-
   const [movie, setMovie] = useState({});
 
   useEffect(() => {
@@ -36,7 +35,7 @@ export default function MoviePage() {
     };
 
     fetchData();
-  }, []);
+  }, [id, dispatch]);
 
   return (
     <Wrapper>
