@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Logo from '../../components/logo/';
-import SearchBarContainer from '../search-bar/';
+import Logo from '../logo';
+import SearchBarContainer from '../../containers/search-bar';
 
 import { Container, HomeButton } from './style';
 
-export default function HeaderContainer({ showSearchBar = true }) {
+export default function Header({ showSearchBar = true }) {
   return (
     <Container>
       <HomeButton to="/">

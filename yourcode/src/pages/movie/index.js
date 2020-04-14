@@ -11,8 +11,7 @@ import FullMovieCover from '../../components/full-movie-cover/';
 import Badge from '../../components/badge/';
 import Blockquote from '../../components/blockquote/';
 import FavoriteButton from '../../components/favorite-button/';
-
-import HeaderContainer from '../../containers/header';
+import Header from '../../components/header';
 
 import OmdbProvider from '../../providers/omdb.provider';
 
@@ -41,7 +40,7 @@ export default function MoviePage() {
 
   return (
     <Wrapper>
-      <HeaderContainer showSearchBar={false} />
+      <Header showSearchBar={false} />
 
       <BackButton to="/">
         <BackIcon alt="Go back" title="Go back" />
