@@ -1,0 +1,11 @@
+.search {
+    &__icon {
+        background-image: url('../../../assets/images/svg/icon-magnifier-grey.svg');
+        background-repeat: no-repeat;
+        background-position: 10px 15px;
+        padding: 12px 20px 12px 40px;
+        background-color: white;
+        transition: all 0.2s ease;
+        height: auto;
+    }
+}
