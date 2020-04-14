@@ -18,6 +18,31 @@ export const Main = styled.main`
   align-items: center;
 `;
 
+export const Metadata = styled.span`
+  display: block;
+  margin-bottom: 26px;
+
+  color: #7a8c99;
+  font-family: Helvetica;
+  font-size: 20px;
+  letter-spacing: 0.22px;
+  line-height: 24px;
+
+  strong {
+    background-color: #7a8c99;
+    border-radius: 4px;
+
+    color: #0a1014;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.17px;
+    line-height: 20px;
+    padding: 4px 6px;
+    display: inline-block;
+  }
+`;
+
 export const MovieTitle = styled.h2`
   color: #ffffff;
   font-family: Helvetica;

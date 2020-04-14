@@ -11,7 +11,7 @@ import FavoriteButton from '../../components/favorite-button/';
 
 import HeaderContainer from '../../containers/header';
 
-import { Main, BackButton, MovieDetails, Plot, SecondaryInfo, Badges, MovieTitle } from './style';
+import { Main, BackButton, MovieDetails, Plot, SecondaryInfo, Badges, MovieTitle, Metadata } from './style';
 
 export default function MoviePage() {
   return (
@@ -24,6 +24,10 @@ export default function MoviePage() {
 
       <Main>
         <MovieDetails>
+          <Metadata>
+            86 min · 2014 · <strong>R</strong>
+          </Metadata>
+
           <MovieTitle>What We Do in the Shadows</MovieTitle>
 
           <Badges>
