@@ -9,7 +9,7 @@ export default function SearchBarContainer() {
 
   return (
     <Container>
-      <Icon />
+      <Icon alt="Icon" title="Icon" />
 
       <Input placeholder="Search movies..." minLength={2} debounceTimeout={300} onChange={handleSearch} />
     </Container>

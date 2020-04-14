@@ -8,7 +8,7 @@ import { Container, HomeButton } from './style';
 export default function HeaderContainer({ showSearchBar = true }) {
   return (
     <Container>
-      <HomeButton href="#">
+      <HomeButton to="/">
         <Logo />
       </HomeButton>
 

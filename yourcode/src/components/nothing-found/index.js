@@ -5,7 +5,7 @@ import { Container, Illustration, Title, Description } from './style';
 export default function NothingFound({ terms }) {
   return (
     <Container>
-      <Illustration />
+      <Illustration alt="Illustration" title="Illustration" />
 
       <Title>Sorry, nothing found!</Title>
 

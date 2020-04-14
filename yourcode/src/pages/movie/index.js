@@ -19,7 +19,7 @@ export default function MoviePage() {
       <HeaderContainer showSearchBar={false} />
 
       <BackButton to="/">
-        <BackIcon />
+        <BackIcon alt="Go back" title="Go back" />
       </BackButton>
 
       <Main>
@@ -31,9 +31,9 @@ export default function MoviePage() {
           <MovieTitle>What We Do in the Shadows</MovieTitle>
 
           <Badges>
-            <Badge color="#FF9F1C" icon={<ImdbLogo />} value="7.6/10" />
+            <Badge color="#FF9F1C" icon={<ImdbLogo alt="IMDB Logo" title="IMDB Logo" />} value="7.6/10" />
 
-            <Badge color="#FF4040" icon={<CotationLogo />} value="96%" />
+            <Badge color="#FF4040" icon={<CotationLogo alt="Cotation Logo" title="Cotation Logo" />} value="96%" />
 
             <FavoriteButton />
           </Badges>
@@ -54,7 +54,7 @@ export default function MoviePage() {
           </SecondaryInfo>
         </MovieDetails>
 
-        <FullMovieCover image="https://www.fillmurray.com/800/800" />
+        <FullMovieCover image="https://www.fillmurray.com/800/800" alt="" title="" />
       </Main>
     </Wrapper>
   );

@@ -8,13 +8,13 @@ export default function MoviesGridItem({ image, title, year, isFavorite }) {
   return (
     <Container>
       <Thumbnail>
-        <img src={image} alt={title} />
+        <img src={image} alt={title} title={title} />
       </Thumbnail>
 
       <Caption>
         <CaptionActions>
           <CaptionActionsItem>
-            <a href="#">{isFavorite ? <FullHeartIcon /> : <HeartIcon />}</a>
+            <a href="#">{isFavorite ? <FullHeartIcon alt="Unlike" title="Unlike" /> : <HeartIcon alt="Like" title="Like" />}</a>
           </CaptionActionsItem>
         </CaptionActions>
 
