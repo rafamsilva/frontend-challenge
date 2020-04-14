@@ -37,7 +37,7 @@ export const Badges = styled.div`
   }
 `;
 
-export const Details = styled.section`
+export const MovieDetails = styled.section`
   width: 49.152542373%;
 `;
 

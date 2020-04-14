@@ -11,7 +11,7 @@ import FavoriteButton from '../../components/favorite-button/';
 
 import HeaderContainer from '../../containers/header';
 
-import { Main, BackButton, Details, Plot, SecondaryInfo, Badges, MovieTitle } from './style';
+import { Main, BackButton, MovieDetails, Plot, SecondaryInfo, Badges, MovieTitle } from './style';
 
 export default function MoviePage() {
   return (
@@ -23,7 +23,7 @@ export default function MoviePage() {
       </BackButton>
 
       <Main>
-        <Details>
+        <MovieDetails>
           <MovieTitle>What We Do in the Shadows</MovieTitle>
 
           <Badges>
@@ -48,7 +48,7 @@ export default function MoviePage() {
 
             <Blockquote title="Director" list={['Jemaine Clement', 'Taika Waititi']} />
           </SecondaryInfo>
-        </Details>
+        </MovieDetails>
 
         <FullMovieCover image="https://www.fillmurray.com/800/800" />
       </Main>
