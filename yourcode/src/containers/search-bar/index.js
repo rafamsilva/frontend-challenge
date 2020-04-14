@@ -1,10 +1,15 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+
+import { MOVIES_FETCH_REQUESTED_ACTION } from '../../store/actions';
 
 import { Container, Icon, Input } from './style';
 
 export default function SearchBarContainer() {
+  const dispatch = useDispatch();
+
   function handleSearch(event) {
-    console.log(event.target.value);
+    dispatch(MOVIES_FETCH_REQUESTED_ACTION(event.target.value));
   }
 
   return (

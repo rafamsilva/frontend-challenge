@@ -1,25 +1,21 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 import { Container, MovieGrid } from './style';
 
 import MoviesGridItem from '../../components/movies-grid-item';
 import NothingFound from '../../components/nothing-found';
 
-export default function MoviesContainer({ movies }) {
+export default function MoviesContainer() {
+  const movies = useSelector((state) => (state.movies ? state.movies.Search : []));
+
   return (
     <Container>
       {movies ? (
         <MovieGrid>
-          <MoviesGridItem image="https://www.fillmurray.com/400/400" title="What We Do in the Shadows" year="2018" />
-          <MoviesGridItem image="https://www.fillmurray.com/400/400" title="What We Do in the Shadows" year="2018" />
-          <MoviesGridItem image="https://www.fillmurray.com/400/400" title="What We Do in the Shadows" year="2018" />
-          <MoviesGridItem image="https://www.fillmurray.com/400/400" title="What We Do in the Shadows" year="2018" />
-          <MoviesGridItem image="https://www.fillmurray.com/400/400" title="What We Do in the Shadows" year="2018" />
-          <MoviesGridItem image="https://www.fillmurray.com/400/400" title="What We Do in the Shadows" year="2018" />
-          <MoviesGridItem image="https://www.fillmurray.com/400/400" title="What We Do in the Shadows" year="2018" />
-          <MoviesGridItem image="https://www.fillmurray.com/400/400" title="What We Do in the Shadows" year="2018" />
-          <MoviesGridItem image="https://www.fillmurray.com/400/400" title="What We Do in the Shadows" year="2018" />
-          <MoviesGridItem image="https://www.fillmurray.com/400/400" title="What We Do in the Shadows" year="2018" />
+          {movies.map((value, index) => {
+            return <MoviesGridItem image={value.Poster} title={value.Title} year={value.Year} id={value.imdbID} key={index} />;
+          })}
         </MovieGrid>
       ) : (
         <NothingFound />

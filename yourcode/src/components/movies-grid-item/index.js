@@ -4,7 +4,7 @@ import { ReactComponent as FullHeartIcon } from '../../assets/images/icon-heart-
 
 import { Container, Thumbnail, Caption, CaptionInfo, MovieTitle, MovieYear, CaptionActions, CaptionActionsItem } from './style';
 
-export default function MoviesGridItem({ image, title, year, isFavorite }) {
+export default function MoviesGridItem({ image, title, year, isFavorite, id }) {
   return (
     <Container>
       <Thumbnail>
@@ -18,7 +18,7 @@ export default function MoviesGridItem({ image, title, year, isFavorite }) {
           </CaptionActionsItem>
         </CaptionActions>
 
-        <CaptionInfo to="/movie/1">
+        <CaptionInfo to={`/movie/${id}`}>
           <MovieTitle>{title}</MovieTitle>
 
           <MovieYear>{year}</MovieYear>
