@@ -1,1 +1,23 @@
-<app-search (onSearch)="search($event)"></app-search>
+<app-search (onSearch)="valueSearch($event)"></app-search>
+
+<ng-container *ngIf="movies?.length > 0">
+    <div class="results mb-5"
+      infiniteScroll
+      [infiniteScrollDistance]=".2"
+      [infiniteScrollThrottle]="300"
+      (scrolled)="onScroll()">
+
+        <div class="row">
+          <ng-container *ngFor="let movie of movies">
+              <div class="col-6 col-xl-2 col-md-2 col-sm-4 mb-4">
+                  <app-card [movie]=movie></app-card>
+              </div>
+          </ng-container>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="!(movies?.length > 0)">
+    <p class="color-grey">{{message}}</p>
+    <app-notfound></app-notfound>
+</ng-container>

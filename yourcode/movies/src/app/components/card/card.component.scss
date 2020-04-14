@@ -1,0 +1,68 @@
+.card {
+	width: 100%;
+	min-height: 220px;
+	position: relative;
+	border: 0;
+	padding: 10px 15px;
+	&:hover {
+		cursor: pointer;
+		&:before {
+			opacity: 1;
+		}
+
+		.card__info {
+			opacity: 1;
+		}
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+		background: rgba(#0A1014, 0.8);
+		z-index: 2;
+		transition: 0.5s;
+		opacity: 0;
+	}
+	.card__image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-radius: 3px;
+	}
+	.card__like {
+		z-index: 3;
+		position: absolute;
+		right: 5px;
+	}
+	.card__info {
+		z-index: 3;
+		color: #FFF;
+		opacity: 0;
+
+		.card__unlike {
+			position: absolute;
+			right: 5px;
+		}
+
+		.card__titles {
+			position: absolute;
+			bottom: 5px;
+			left: 10px;
+
+			h4 {
+				font-size: 14px;
+			}
+
+			h5 {
+				font-size: 12px;
+			}
+		}
+	}
+}
