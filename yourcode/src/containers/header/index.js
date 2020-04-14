@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Logo from '../../components/logo/';
-import SearchBar from '../../components/search-bar/';
+import SearchBarContainer from '../search-bar/';
 
 import { Container, HomeButton } from './style';
 
@@ -12,7 +12,7 @@ export default function HeaderContainer({ showSearchBar = true }) {
         <Logo />
       </HomeButton>
 
-      {showSearchBar ? <SearchBar /> : null}
+      {showSearchBar ? <SearchBarContainer /> : null}
     </Container>
   );
 }

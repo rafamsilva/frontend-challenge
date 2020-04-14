@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { DebounceInput } from 'react-debounce-input';
 import { ReactComponent as MagnifierIcon } from '../../assets/images/icon-magnifier-grey.svg';
 
 export const Container = styled.div`
@@ -17,7 +18,7 @@ export const Icon = styled(MagnifierIcon)`
   margin-right: 12px;
 `;
 
-export const Input = styled.input`
+export const Input = styled(DebounceInput)`
   border: 0;
   height: 100%;
   font-family: Helvetica;
