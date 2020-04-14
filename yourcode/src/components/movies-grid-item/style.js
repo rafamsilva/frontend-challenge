@@ -14,9 +14,8 @@ const commonText = `
 `;
 
 export const Container = styled.div`
-  width: (180/1180) * 100%;
-  max-width: 180px;
-  height: 240px;
+  width: 100%;
+  height: 100%;
   border-radius: 3px;
   box-shadow: 0 4px 30px 0 rgba(5, 10, 13, 0.3);
   overflow: hidden;

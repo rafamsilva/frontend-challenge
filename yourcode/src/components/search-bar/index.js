@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Container, Icon, Input } from './style';
 
-export default function Search() {
+export default function SearchBar() {
   return (
     <Container>
       <Icon />
