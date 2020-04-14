@@ -21,6 +21,7 @@ export const Icon = styled(MagnifierIcon)`
 export const Input = styled(DebounceInput)`
   border: 0;
   height: 100%;
+  width: 100%;
   font-family: Helvetica;
   color: #0a1014;
   font-size: 16px;
