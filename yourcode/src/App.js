@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
 
-import HomePage from './pages/home';
+import MoviePage from './pages/movie';
 
 function App() {
-  return <HomePage />;
+  return <MoviePage />;
 }
 
 export default App;

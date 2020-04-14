@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   max-width: 480px;
-  width: (480/1180) * 100%;
+  width: 40.677966102%;
   height: 640px;
   overflow: hidden;
   border-radius: 8px;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.a`
+export const Container = styled.div`
   display: flex;
   border: 1px solid #353f4c;
   border-radius: 4px;
@@ -8,7 +8,7 @@ export const Container = styled.a`
 
   span {
     height: 40px;
-    padding: 0 5px;
+    padding: 0 8px;
     display: flex;
     align-items: center;
   }
