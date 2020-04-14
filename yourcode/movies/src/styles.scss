@@ -1,0 +1,58 @@
+/*
+FONTS
+------------------ */
+
+@font-face {
+    font-family: "mytupiregular";
+    src: url("../src/assets/fonts/mytupi-webfont.woff2") format("woff2"),
+        url("../src/assets/fonts/mytupi-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "mytupibold";
+    src: url("../src/assets/fonts/mytupibold-webfont.woff2") format("woff2"),
+        url("../src/assets/fonts/mytupibold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "mytupiultraCnXBd";
+    src: url("../src/assets/fonts/mytupiimpacto-webfont.woff2") format("woff2"),
+        url("../src/assets/fonts/mytupiimpacto-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: #0A1014;
+    margin: 0;
+    font-family: "mytupiregular";
+    font-size: 14px;
+
+}
+a {
+    text-decoration: none;
+}
+h1 {
+    font-size: 72px;
+}
+
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 12px;
+}
+p{
+    line-height: 24px;
+}
+
+.color-white {
+    color: #FFF;
+}
+.color-grey {
+    color: #6A818D;
+}
