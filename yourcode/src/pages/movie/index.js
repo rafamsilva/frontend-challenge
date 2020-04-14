@@ -31,9 +31,7 @@ export default function MoviePage() {
     const fetchData = async () => {
       dispatch(START_LOADER_ACTION());
 
-      const response = await OmdbProvider.fetchMovie(id);
-
-      setMovie(response);
+      setMovie(await OmdbProvider.fetchMovie(id));
 
       dispatch(STOP_LOADER_ACTION());
     };
