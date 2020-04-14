@@ -18,7 +18,7 @@ export default function MoviesGridItem({ image, title, year, isFavorite }) {
           </CaptionActionsItem>
         </CaptionActions>
 
-        <CaptionInfo href="#">
+        <CaptionInfo to="/movie/1">
           <MovieTitle>{title}</MovieTitle>
 
           <MovieYear>{year}</MovieYear>

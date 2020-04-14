@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const commonPosition = `
   width: 100%;
@@ -60,7 +61,7 @@ export const CaptionActions = styled.ul`
 
 export const CaptionActionsItem = styled.li``;
 
-export const CaptionInfo = styled.a`
+export const CaptionInfo = styled(Link)`
   display: block;
   text-decoration: none;
 `;

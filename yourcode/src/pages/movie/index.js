@@ -18,7 +18,7 @@ export default function MoviePage() {
     <Wrapper>
       <HeaderContainer showSearchBar={false} />
 
-      <BackButton href="#">
+      <BackButton to="/">
         <BackIcon />
       </BackButton>
 
