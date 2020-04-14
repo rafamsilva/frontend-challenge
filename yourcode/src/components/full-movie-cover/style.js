@@ -11,6 +11,7 @@ export const Container = styled.div`
   background-color: #000;
 
   img {
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;

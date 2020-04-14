@@ -5,6 +5,10 @@ const BASE_URL = `http://www.omdbapi.com/?apikey=${API_KEY}`;
 const BASE_POSTER_URL = `http://img.omdbapi.com/?apikey=${API_KEY}`;
 
 const Provider = {
+  fetchMovie: async (id) => {
+    return (await axios.get(`${BASE_URL}&i=${id}`)).data;
+  },
+
   fetchMovies: async (filter) => {
     return (await axios.get(`${BASE_URL}&s=${filter}`)).data;
   },

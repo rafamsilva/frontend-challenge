@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+
 import { ReactComponent as BackIcon } from '../../assets/images/icon-arrow-white.svg';
 import { ReactComponent as ImdbLogo } from '../../assets/images/logo-imdb.svg';
 import { ReactComponent as CotationLogo } from '../../assets/images/icon-cotation.svg';
@@ -11,9 +14,33 @@ import FavoriteButton from '../../components/favorite-button/';
 
 import HeaderContainer from '../../containers/header';
 
+import OmdbProvider from '../../providers/omdb.provider';
+
+import { START_LOADER_ACTION, STOP_LOADER_ACTION } from '../../store/actions';
+
 import { Main, BackButton, MovieDetails, Plot, SecondaryInfo, Badges, MovieTitle, Metadata } from './style';
 
 export default function MoviePage() {
+  const dispatch = useDispatch();
+
+  const { id } = useParams();
+
+  const [movie, setMovie] = useState({});
+
+  useEffect(() => {
+    const fetchData = async () => {
+      dispatch(START_LOADER_ACTION());
+
+      const response = await OmdbProvider.fetchMovie(id);
+
+      setMovie(response);
+
+      dispatch(STOP_LOADER_ACTION());
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <Wrapper>
       <HeaderContainer showSearchBar={false} />
@@ -25,13 +52,13 @@ export default function MoviePage() {
       <Main>
         <MovieDetails>
           <Metadata>
-            86 min · 2014 · <strong>R</strong>
+            {movie.Runtime} · 2014 · <strong>R</strong>
           </Metadata>
 
-          <MovieTitle>What We Do in the Shadows</MovieTitle>
+          <MovieTitle>{movie.Title}</MovieTitle>
 
           <Badges>
-            <Badge color="#FF9F1C" icon={<ImdbLogo alt="IMDB Logo" title="IMDB Logo" />} value="7.6/10" />
+            <Badge color="#FF9F1C" icon={<ImdbLogo alt="IMDB Logo" title="IMDB Logo" />} value={`${movie.imdbRating}/10`} />
 
             <Badge color="#FF4040" icon={<CotationLogo alt="Cotation Logo" title="Cotation Logo" />} value="96%" />
 
@@ -39,10 +66,7 @@ export default function MoviePage() {
           </Badges>
 
           <Plot>
-            <Blockquote
-              title="Plot"
-              text="Viago, Deacon, and Vladislav are vampires who are finding that modern life has them struggling with the mundane - like paying rent, keeping up with the chore wheel, trying to get into nightclubs, and overcoming flatmate conflicts."
-            />
+            <Blockquote title="Plot" text={movie.Plot} />
           </Plot>
 
           <SecondaryInfo>
@@ -54,7 +78,7 @@ export default function MoviePage() {
           </SecondaryInfo>
         </MovieDetails>
 
-        <FullMovieCover image="https://www.fillmurray.com/800/800" alt="" title="" />
+        <FullMovieCover image={movie.Poster} alt={movie.Title} title={movie.Title} />
       </Main>
     </Wrapper>
   );
