@@ -11,6 +11,7 @@ import { Interceptor } from './utils/http/interceptor';
 
 import { PreloaderComponent } from './components/preloader/preloader.component';
 import { PreloaderService } from './services/preloader/preloader-service';
+import { DetailModule } from './pages/detail/detail.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PreloaderService } from './services/preloader/preloader-service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    HomeModule
+    HomeModule,
+    DetailModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: Interceptor, multi: true },

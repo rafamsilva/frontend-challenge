@@ -1,0 +1,16 @@
+.times li:after {
+    content: "•";
+    padding: 10px 5px;
+}
+.times li:last-child:after {
+    content: "";
+    padding:  0px;
+}
+.times li{
+    padding: 5px;    
+}
+.times li:last-child{
+    color: #1B2428;
+    background: #6A818D;
+    border-radius: 3px;
+}

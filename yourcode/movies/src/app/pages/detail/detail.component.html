@@ -1,0 +1,107 @@
+<a [routerLink]="['/']">
+    <img src="../../../../assets/images/svg/icon-arrow-grey.svg">
+</a>
+
+<div class="row">
+    <div class="col-12 col-lg col-md col-md-12 col-sm-12">
+
+        <ul class="nav color-grey mb-3 mt-4 times">
+            <li>
+                {{movie?.Runtime}}
+            </li>
+            <li>
+                {{movie?.Year}}
+            </li>
+            <li>
+                {{movie?.Rated}}
+            </li>
+        </ul>
+        <div class="col-12 col-lg col-md d-lg-none d-lg-none mb-5">
+            <ng-container *ngIf="movie?.Poster != 'N/A'">
+                <img [src]="movie?.Poster" [alt]="movie?.Title" class="img-fluid roundedm mx-auto d-block" />
+            </ng-container>
+            <ng-container *ngIf="movie?.Poster == 'N/A'">
+                <img src="https://via.placeholder.com/1000/?text=What+'+s+in" [alt]="movie.Title" class="img-fluid rounded mx-auto d-block" />
+            </ng-container>
+        </div>
+        <h1 class="color-white mb-4">{{movie?.Title}}</h1>
+        <div class="row mb-4">
+            <app-button *ngIf="movie?.Ratings[0]"
+                [label]=movie?.Ratings[0]?.Value
+                color="button--yellow"
+                column="col"
+                icon="logo-imdb.svg"
+                type="info"
+            >
+            </app-button>
+
+            <app-button *ngIf="movie?.Ratings[1]"
+                [label]=movie?.Ratings[1]?.Value
+                color="button--red"
+                column="col"
+                icon="logo-rotten-tomatoes.svg"
+                type="info"
+            >
+            </app-button>
+
+            <app-button
+                [label]=btnConfig?.label
+                color=""
+                column="col"
+                [icon]=btnConfig?.icon
+                (onClick)="favorite($event)"
+                [isFavorite]=btnConfig?.isFavorite
+                type="action"
+            >
+            </app-button>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <app-text-box
+                    title="Plot"
+                    [description]=movie?.Plot
+                    type="text">
+                </app-text-box>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <app-text-box
+                    title="Cast"
+                    [description]=movie?.Actors
+                    type="list"
+                >
+                </app-text-box>
+            </div>
+
+            <div class="col">
+                <app-text-box
+                    title="Genre"
+                    [description]=movie?.Genre
+                    type="list"
+                >
+                </app-text-box>
+            </div>
+
+            <div class="col">
+                <app-text-box
+                    title="Director"
+                    [description]=movie?.Director
+                    type="list"
+                >
+                </app-text-box>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-12 col-lg col-md d-none d-xl-block d-lg-block ">
+        <ng-container *ngIf="movie?.Poster != 'N/A'">
+            <img [src]="movie?.Poster" [alt]="movie?.Title" class="img-fluid roundedm mx-auto d-block" />
+        </ng-container>
+        <ng-container *ngIf="movie?.Poster == 'N/A'">
+            <img src="https://via.placeholder.com/1000/?text=What+'+s+in" [alt]="movie.Title" class="img-fluid rounded mx-auto d-block" />
+        </ng-container>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<ng-container *ngIf="type == 'info'">
+    <div [ngClass]="column">
+        <button class="button mb-1 mt-1">
+            {{label}}
+            <div class="button__icon" [ngClass]=color>
+                <img [src]="path(icon)">
+            </div>
+        </button>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="type == 'action'">
+    <div [ngClass]="column">
+        <button class="button mb-1 mt-1" [ngClass]="{'button__actived': isFavorite}" (click)="onClickbutton()">
+            {{label}}
+            <div class="button__icon" [ngClass]=color>
+                <img [src]="path(icon)">
+            </div>
+        </button>
+    </div>
+</ng-container>

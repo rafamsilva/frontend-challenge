@@ -1,0 +1,13 @@
+  
+    <h5 class="color-grey">{{title}}</h5>
+    <ng-container *ngIf="type == 'text'">
+        <p class="color-white">{{description}}</p>
+    </ng-container>
+
+    <ng-container *ngIf="type =='list'">
+        <ul class="nav flex-column color-white">
+            <li *ngFor="let item of textForArray(description)">
+                {{item}}
+            </li>
+        </ul>
+    </ng-container>

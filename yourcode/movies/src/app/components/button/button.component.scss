@@ -1,0 +1,29 @@
+.button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px 10px 60px;
+    border: 1px solid #7a8c99;
+    border-radius: 5px;
+    background: none;
+    color: #7a8c99;
+    &__icon {
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        bottom: -1px;
+        padding: 10px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    &--yellow {
+        background-color: #ff912f;
+    }
+    &--red {
+        background-color: #ff2b3c;
+    }
+}
+.button__actived {
+    background-color: #ff2b3c;
+    border: 1px solid #ff2b3c;
+    color: #fff;
+}
