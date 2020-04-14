@@ -1,4 +1,5 @@
 const INITIAL_STATE = {
+  lastFilter: '',
   loading: false,
   movies: [],
 };
@@ -12,6 +13,10 @@ export default function reducer(state = INITIAL_STATE, action) {
     case 'STOP_LOADER':
       return Object.assign({}, state, {
         loading: false,
+      });
+    case 'SET_FILTER':
+      return Object.assign({}, state, {
+        lastFilter: action.payload.filter,
       });
     case 'MOVIES_FETCH_SUCCEEDED':
       return Object.assign({}, state, {

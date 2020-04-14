@@ -7,6 +7,7 @@ import MoviesGridItem from '../../components/movies-grid-item';
 import NothingFound from '../../components/nothing-found';
 
 export default function MoviesContainer() {
+  const lastFilter = useSelector((state) => state.lastFilter);
   const movies = useSelector((state) => (state.movies ? state.movies.Search : []));
 
   return (
@@ -18,7 +19,7 @@ export default function MoviesContainer() {
           })}
         </MovieGrid>
       ) : (
-        <NothingFound />
+        <NothingFound terms={lastFilter} />
       )}
     </Container>
   );

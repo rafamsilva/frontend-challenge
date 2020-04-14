@@ -7,9 +7,11 @@ export default function NothingFound({ terms }) {
     <Container>
       <Illustration alt="Illustration" title="Illustration" />
 
-      <Title>Sorry, nothing found!</Title>
+      <Title>{terms ? 'Sorry, nothing found!' : 'Don’t know what to search?'}</Title>
 
-      <Description>Sorry, nothing was found to term: `{terms}`. Try again with different terms</Description>
+      <Description>
+        {terms ? `Sorry, nothing was found to term: \`${terms}\`. Try again with different terms` : 'Here’s an offer you can’t refuse'}
+      </Description>
     </Container>
   );
 }
