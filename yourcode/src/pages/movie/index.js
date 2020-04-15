@@ -47,30 +47,38 @@ export default function MoviePage() {
 
       <Main>
         <MovieDetails>
-          <Metadata>
-            {movie.Runtime} · 2014 · <strong>R</strong>
-          </Metadata>
+          {movie.Runtime || movie.Released || movie.Rated ? (
+            <Metadata>
+              {movie.Runtime} {movie.Runtime && (movie.Released || movie.Rated) ? '· ' : null}
+              {movie.Released} {movie.Released && movie.Rated ? '· ' : null}
+              {movie.Rated ? <strong>{movie.Rated}</strong> : null}
+            </Metadata>
+          ) : null}
 
           <MovieTitle>{movie.Title}</MovieTitle>
 
           <Badges>
-            <Badge color="#FF9F1C" icon={<ImdbLogo alt="IMDB Logo" title="IMDB Logo" />} value={`${movie.imdbRating}/10`} />
+            {movie.imdbRating ? (
+              <Badge color="#FF9F1C" icon={<ImdbLogo alt="IMDB Logo" title="IMDB Logo" />} value={`${movie.imdbRating}/10`} />
+            ) : null}
 
-            <Badge color="#FF4040" icon={<CotationLogo alt="Cotation Logo" title="Cotation Logo" />} value="96%" />
+            {movie.imdbVotes ? <Badge color="#FF4040" icon={<CotationLogo alt="Total Votes" title="Total Votes" />} value={movie.imdbVotes} /> : null}
 
             <FavoriteButton />
           </Badges>
 
-          <Plot>
-            <Blockquote title="Plot" text={movie.Plot} />
-          </Plot>
+          {movie.Plot ? (
+            <Plot>
+              <Blockquote title="Plot" text={movie.Plot} />
+            </Plot>
+          ) : null}
 
           <SecondaryInfo>
-            <Blockquote title="Cast" list={['Jemaine Clement', 'Cori Gonzalez-Macuer', 'Taika Waititi', 'Jonny Brugh']} />
+            {movie.Actors ? <Blockquote title="Cast" list={movie.Actors} /> : null}
 
-            <Blockquote title="Genre" list={['Comedy', 'Horror']} />
+            {movie.Genre ? <Blockquote title="Genre" list={movie.Genre} /> : null}
 
-            <Blockquote title="Director" list={['Jemaine Clement', 'Taika Waititi']} />
+            {movie.Director ? <Blockquote title="Director" list={movie.Director} /> : null}
           </SecondaryInfo>
         </MovieDetails>
 

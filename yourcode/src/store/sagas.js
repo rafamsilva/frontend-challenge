@@ -1,4 +1,5 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
+
 import OmdbProvider from '../providers/omdb.provider';
 
 function* fetchMovies(action) {

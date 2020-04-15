@@ -8,11 +8,11 @@ import NothingFound from '../../components/nothing-found';
 
 export default function MoviesContainer() {
   const lastFilter = useSelector((state) => state.lastFilter);
-  const movies = useSelector((state) => (state.movies ? state.movies.Search : []));
+  const movies = useSelector((state) => state.movies);
 
   return (
     <Container>
-      {movies ? (
+      {movies.length ? (
         <MovieGrid>
           {movies.map((value, index) => {
             return <MoviesGridItem image={value.Poster} title={value.Title} year={value.Year} id={value.imdbID} key={index} />;

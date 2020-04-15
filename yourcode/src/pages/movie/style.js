@@ -79,5 +79,8 @@ export const SecondaryInfo = styled.div`
 
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+
+  > div {
+    margin-right: 11.666666667%;
+  }
 `;
