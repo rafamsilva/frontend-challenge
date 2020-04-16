@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Badge Component Should match snapshot should match snapshot with icon 1`] = `"<div class=\\"sc-AxjAm gFqxcz\\"><span data-testid=\\"icon\\" class=\\"sc-AxirZ dTmdqe\\"><svg alt=\\"IMDB Logo\\" title=\\"IMDB Logo\\">logo-imdb.svg</svg></span><span data-testid=\\"text\\" class=\\"sc-AxiKw jVCyOE\\">10</span></div>"`;
+
+exports[`Badge Component Should match snapshot should match snapshot without icon 1`] = `"<div class=\\"sc-AxjAm gFqxcz\\"><span data-testid=\\"text\\" class=\\"sc-AxiKw jVCyOE\\">10</span></div>"`;
