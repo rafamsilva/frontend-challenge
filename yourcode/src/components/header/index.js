@@ -12,7 +12,7 @@ export default function Header({ showSearchBar = true }) {
         <Logo />
       </HomeButton>
 
-      {showSearchBar ? <SearchBarContainer /> : null}
+      {showSearchBar ? <SearchBarContainer data-testid="search-bar" /> : null}
     </Container>
   );
 }
