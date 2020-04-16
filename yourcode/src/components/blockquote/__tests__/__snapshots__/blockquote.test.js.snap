@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blockquote Component Snapshot should match snapshot with list 1`] = `
+"<div class=\\"sc-AxjAm StDqN\\">
+  <h4 data-testid=\\"title\\" class=\\"sc-AxirZ gOuwVb\\">Directors</h4>
+  <ul data-testid=\\"list\\" class=\\"sc-AxhCb ccMvAG\\">
+    <li class=\\"sc-AxiKw sc-AxhUy hnPENf\\">Darwin</li>
+    <li class=\\"sc-AxiKw sc-AxhUy hnPENf\\">Rafael</li>
+  </ul>
+</div>"
+`;
+
+exports[`Blockquote Component Snapshot should match snapshot with text 1`] = `
+"<div class=\\"sc-AxjAm StDqN\\">
+  <h4 data-testid=\\"title\\" class=\\"sc-AxirZ gOuwVb\\">Plot</h4>
+  <p data-testid=\\"text\\" class=\\"sc-AxiKw fJBmqZ\\">Hello World!</p>
+</div>"
+`;
