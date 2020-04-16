@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.a`
+export const Container = styled.span`
   display: flex;
   padding: 0 12px;
   border: 1px solid #353f4c;
@@ -9,6 +9,7 @@ export const Container = styled.a`
   flex-direction: row;
   align-items: center;
   text-decoration: none;
+  cursor: pointer;
   background-color: ${(props) => (props.active ? '#FF4040' : 'none')};
 `;
 

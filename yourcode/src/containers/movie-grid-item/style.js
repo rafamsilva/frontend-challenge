@@ -59,7 +59,9 @@ export const CaptionActions = styled.ul`
   justify-content: flex-end;
 `;
 
-export const CaptionActionsItem = styled.li``;
+export const CaptionActionsItem = styled.li`
+  cursor: pointer;
+`;
 
 export const CaptionInfo = styled(Link)`
   display: block;

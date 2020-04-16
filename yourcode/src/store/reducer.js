@@ -1,7 +1,10 @@
+import _ from 'lodash';
+
 const INITIAL_STATE = {
   lastFilter: '',
   loading: false,
   movies: [],
+  favorites: [],
 };
 
 export default function reducer(state = INITIAL_STATE, action) {
@@ -27,6 +30,14 @@ export default function reducer(state = INITIAL_STATE, action) {
       return Object.assign({}, state, {
         loading: false,
         err: action.payload.err,
+      });
+    case 'ADD_MOVIE_FAVORITE':
+      return Object.assign({}, state, {
+        favorites: _.uniq([...state.favorites, action.payload.movieId]),
+      });
+    case 'REMOVE_MOVIE_FAVORITE':
+      return Object.assign({}, state, {
+        favorites: state.favorites.filter((movie) => movie !== action.payload.movieId),
       });
     default:
       return state;

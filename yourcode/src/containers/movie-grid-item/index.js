@@ -1,10 +1,19 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { ReactComponent as HeartIcon } from '../../assets/images/icon-heart-white.svg';
 import { ReactComponent as FullHeartIcon } from '../../assets/images/icon-heart-full.svg';
 
+import { REMOVE_MOVIE_FAVORITE_ACTION, ADD_MOVIE_FAVORITE_ACTION } from '../../store/actions';
+
 import { Container, Thumbnail, Caption, CaptionInfo, MovieTitle, MovieYear, CaptionActions, CaptionActionsItem } from './style';
 
-export default function MoviesGridItem({ image, title, year, isFavorite, id }) {
+export default function MovieGridItemContainer({ image, title, year, isFavorite, id }) {
+  const dispatch = useDispatch();
+
+  function toggleFavorite(movieId) {
+    return isFavorite ? dispatch(REMOVE_MOVIE_FAVORITE_ACTION(movieId)) : dispatch(ADD_MOVIE_FAVORITE_ACTION(movieId));
+  }
+
   return (
     <Container>
       <Thumbnail>
@@ -13,7 +22,11 @@ export default function MoviesGridItem({ image, title, year, isFavorite, id }) {
 
       <Caption>
         <CaptionActions>
-          <CaptionActionsItem>
+          <CaptionActionsItem
+            onClick={() => {
+              toggleFavorite(id);
+            }}
+          >
             {isFavorite ? <FullHeartIcon alt="Unlike" title="Unlike" /> : <HeartIcon alt="Like" title="Like" />}
           </CaptionActionsItem>
         </CaptionActions>

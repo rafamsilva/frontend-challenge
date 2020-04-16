@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { ReactComponent as BackIcon } from '../../assets/images/icon-arrow-white.svg';
 import { ReactComponent as ImdbLogo } from '../../assets/images/logo-imdb.svg';
@@ -15,15 +15,21 @@ import Header from '../../components/header';
 
 import OmdbProvider from '../../providers/omdb.provider';
 
-import { START_LOADER_ACTION, STOP_LOADER_ACTION } from '../../store/actions';
+import { START_LOADER_ACTION, STOP_LOADER_ACTION, REMOVE_MOVIE_FAVORITE_ACTION, ADD_MOVIE_FAVORITE_ACTION } from '../../store/actions';
 
 import { Main, BackButton, MovieDetails, Plot, SecondaryInfo, Badges, MovieTitle, Metadata } from './style';
 
 export default function MoviePage() {
-  const dispatch = useDispatch();
-
   const { id } = useParams();
+
+  const dispatch = useDispatch();
   const [movie, setMovie] = useState({});
+  const [isFavorite, setIsFavorite] = useState({});
+  const favorites = useSelector((state) => state.favorites);
+
+  function toggleFavorite(movieId) {
+    return isFavorite ? dispatch(REMOVE_MOVIE_FAVORITE_ACTION(movieId)) : dispatch(ADD_MOVIE_FAVORITE_ACTION(movieId));
+  }
 
   useEffect(() => {
     const fetchData = async () => {
@@ -36,6 +42,14 @@ export default function MoviePage() {
 
     fetchData();
   }, [id, dispatch]);
+
+  useEffect(() => {
+    function isMovieOnFavorites(movieId) {
+      return Boolean(favorites.find((movie) => movie === movieId));
+    }
+
+    setIsFavorite(isMovieOnFavorites(id));
+  }, [id, favorites]);
 
   return (
     <Wrapper>
@@ -64,7 +78,9 @@ export default function MoviePage() {
 
             {movie.imdbVotes ? <Badge color="#FF4040" icon={<CotationLogo alt="Total Votes" title="Total Votes" />} value={movie.imdbVotes} /> : null}
 
-            <FavoriteButton />
+            <span onClick={() => toggleFavorite(id)}>
+              <FavoriteButton active={isFavorite} />
+            </span>
           </Badges>
 
           {movie.Plot ? (

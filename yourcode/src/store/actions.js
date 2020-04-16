@@ -24,3 +24,21 @@ export function STOP_LOADER_ACTION(text) {
     },
   };
 }
+
+export function ADD_MOVIE_FAVORITE_ACTION(movieId) {
+  return {
+    type: 'ADD_MOVIE_FAVORITE',
+    payload: {
+      movieId,
+    },
+  };
+}
+
+export function REMOVE_MOVIE_FAVORITE_ACTION(movieId) {
+  return {
+    type: 'REMOVE_MOVIE_FAVORITE',
+    payload: {
+      movieId,
+    },
+  };
+}

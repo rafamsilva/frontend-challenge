@@ -3,14 +3,14 @@ import React from 'react';
 import Wrapper from '../../components/wrapper';
 import Header from '../../components/header';
 
-import MoviesContainer from '../../containers/movies';
+import MovieGridContainer from '../../containers/movie-grid';
 
 export default function HomePage() {
   return (
     <Wrapper>
       <Header />
 
-      <MoviesContainer />
+      <MovieGridContainer />
     </Wrapper>
   );
 }
