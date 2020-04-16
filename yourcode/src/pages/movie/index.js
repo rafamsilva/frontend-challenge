@@ -12,7 +12,7 @@ import MovieDetailsContainer from '../../containers/movie-details';
 
 import { START_LOADER_ACTION, STOP_LOADER_ACTION } from '../../store/actions';
 
-import { BackButton } from './style';
+import { BackButton, ErrorMessage } from './style';
 
 export default function MoviePage() {
   const { id } = useParams();
@@ -40,7 +40,7 @@ export default function MoviePage() {
         <BackIcon alt="Go back" title="Go back" />
       </BackButton>
 
-      <MovieDetailsContainer id={movie.imdbID} movie={movie} />
+      {movie ? <MovieDetailsContainer id={movie.imdbID} movie={movie} /> : <ErrorMessage>Not available, try again later!</ErrorMessage>}
     </Wrapper>
   );
 }

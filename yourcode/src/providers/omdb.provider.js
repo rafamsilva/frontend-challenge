@@ -10,6 +10,10 @@ const Provider = {
     let response = (await axios.get(`${BASE_URL}&i=${id}`)).data;
 
     if (response) {
+      if (response.Error) {
+        return undefined;
+      }
+
       response = MoviesUtil.convertNAFieldToUndefined(response);
       response = MoviesUtil.formatFields(response);
     }
