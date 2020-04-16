@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Logo Component Snapshot should match snapshot 1`] = `"<svg alt=\\"What's in Logo\\" title=\\"What's in Logo\\">logo.svg</svg>"`;
