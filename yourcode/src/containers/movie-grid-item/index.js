@@ -16,11 +16,13 @@ export default function MovieGridItemContainer({ image, title, year, isFavorite,
 
   return (
     <Container>
-      <Thumbnail>
-        <img src={image} alt={title} title={title} />
-      </Thumbnail>
+      {image ? (
+        <Thumbnail>
+          <img src={image} alt={title} title={title} />
+        </Thumbnail>
+      ) : null}
 
-      <Caption>
+      <Caption active={!image}>
         <CaptionActions>
           <CaptionActionsItem
             onClick={() => {

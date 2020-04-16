@@ -47,10 +47,18 @@ export const Caption = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  opacity: 0;
+  opacity: ${(props) => (props.active ? '1' : '0')};
+
+  > ul {
+    opacity: 0;
+  }
 
   &:hover {
     opacity: 1;
+
+    > ul {
+      opacity: 1;
+    }
   }
 `;
 
