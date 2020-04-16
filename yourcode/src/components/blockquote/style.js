@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const baseTextStyle = `
-  font-family: Helvetica;
   font-size: 16px;
   letter-spacing: 0.17px;
   line-height: 24px;

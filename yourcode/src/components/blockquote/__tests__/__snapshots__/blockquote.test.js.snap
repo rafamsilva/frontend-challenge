@@ -2,17 +2,17 @@
 
 exports[`Blockquote Component Snapshot should match snapshot with list 1`] = `
 "<div class=\\"sc-AxjAm StDqN\\">
-  <h4 data-testid=\\"title\\" class=\\"sc-AxirZ gOuwVb\\">Directors</h4>
+  <h4 data-testid=\\"title\\" class=\\"sc-AxirZ ertLcl\\">Directors</h4>
   <ul data-testid=\\"list\\" class=\\"sc-AxhCb ccMvAG\\">
-    <li class=\\"sc-AxiKw sc-AxhUy hnPENf\\">Darwin</li>
-    <li class=\\"sc-AxiKw sc-AxhUy hnPENf\\">Rafael</li>
+    <li class=\\"sc-AxiKw sc-AxhUy bDXEwN\\">Darwin</li>
+    <li class=\\"sc-AxiKw sc-AxhUy bDXEwN\\">Rafael</li>
   </ul>
 </div>"
 `;
 
 exports[`Blockquote Component Snapshot should match snapshot with text 1`] = `
 "<div class=\\"sc-AxjAm StDqN\\">
-  <h4 data-testid=\\"title\\" class=\\"sc-AxirZ gOuwVb\\">Plot</h4>
-  <p data-testid=\\"text\\" class=\\"sc-AxiKw fJBmqZ\\">Hello World!</p>
+  <h4 data-testid=\\"title\\" class=\\"sc-AxirZ ertLcl\\">Plot</h4>
+  <p data-testid=\\"text\\" class=\\"sc-AxiKw dbORnj\\">Hello World!</p>
 </div>"
 `;

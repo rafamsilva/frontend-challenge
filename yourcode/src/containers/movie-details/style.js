@@ -13,7 +13,6 @@ export const Metadata = styled.span`
   margin-bottom: 26px;
 
   color: #7a8c99;
-  font-family: Helvetica;
   font-size: 20px;
   letter-spacing: 0.22px;
   line-height: 24px;
@@ -23,7 +22,6 @@ export const Metadata = styled.span`
     border-radius: 4px;
 
     color: #0a1014;
-    font-family: Helvetica;
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 0.17px;
@@ -35,7 +33,6 @@ export const Metadata = styled.span`
 
 export const MovieTitle = styled.h2`
   color: #ffffff;
-  font-family: Helvetica;
   font-size: 80px;
   font-weight: 400;
   letter-spacing: 0.87px;

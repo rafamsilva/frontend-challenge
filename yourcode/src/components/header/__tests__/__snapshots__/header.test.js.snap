@@ -2,7 +2,7 @@
 
 exports[`Header Component Snapshot should match snapshot with search bar 1`] = `
 "<header class=\\"sc-AxhCb kBBbbl\\"><a class=\\"sc-AxhUy fpQjAw\\" href=\\"/\\"><svg alt=\\"What's in Logo\\" title=\\"What's in Logo\\">logo.svg</svg></a>
-  <div class=\\"sc-AxjAm dUDgzT\\"><svg alt=\\"Icon\\" title=\\"Icon\\" class=\\"sc-AxirZ hAQDsX\\">icon-magnifier-grey.svg</svg><input placeholder=\\"Search movies...\\" class=\\"sc-AxiKw fsbycr\\" type=\\"text\\" value=\\"\\"></div>
+  <div class=\\"sc-AxjAm dUDgzT\\"><svg alt=\\"Icon\\" title=\\"Icon\\" class=\\"sc-AxirZ hAQDsX\\">icon-magnifier-grey.svg</svg><input placeholder=\\"Search movies...\\" class=\\"sc-AxiKw exrimN\\" type=\\"text\\" value=\\"\\"></div>
 </header>"
 `;
 

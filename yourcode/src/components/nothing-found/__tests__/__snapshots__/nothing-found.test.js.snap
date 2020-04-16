@@ -2,14 +2,14 @@
 
 exports[`Nothing found Component Snapshot should match snapshot default values 1`] = `
 "<div class=\\"sc-AxjAm lcVokx\\"><svg alt=\\"Illustration\\" title=\\"Illustration\\" class=\\"sc-AxirZ fHEVYp\\">empty-illustration.svg</svg>
-  <h3 data-testid=\\"title\\" class=\\"sc-AxiKw QDhxu\\">Don’t know what to search?</h3>
-  <p data-testid=\\"description\\" class=\\"sc-AxhCb iiHvbn\\">Here’s an offer you can’t refuse</p>
+  <h3 data-testid=\\"title\\" class=\\"sc-AxiKw bYROzk\\">Don’t know what to search?</h3>
+  <p data-testid=\\"description\\" class=\\"sc-AxhCb cuhyRd\\">Here’s an offer you can’t refuse</p>
 </div>"
 `;
 
 exports[`Nothing found Component Snapshot should match snapshot passed values 1`] = `
 "<div class=\\"sc-AxjAm lcVokx\\"><svg alt=\\"Illustration\\" title=\\"Illustration\\" class=\\"sc-AxirZ fHEVYp\\">empty-illustration.svg</svg>
-  <h3 data-testid=\\"title\\" class=\\"sc-AxiKw QDhxu\\">Sorry, nothing found!</h3>
-  <p data-testid=\\"description\\" class=\\"sc-AxhCb iiHvbn\\">Sorry, nothing was found to term: \`Darwin\`. Try again with different terms</p>
+  <h3 data-testid=\\"title\\" class=\\"sc-AxiKw bYROzk\\">Sorry, nothing found!</h3>
+  <p data-testid=\\"description\\" class=\\"sc-AxhCb cuhyRd\\">Sorry, nothing was found to term: \`Darwin\`. Try again with different terms</p>
 </div>"
 `;

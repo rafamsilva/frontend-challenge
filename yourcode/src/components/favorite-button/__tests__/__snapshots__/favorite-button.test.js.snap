@@ -1,5 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FavoriteButton Component Snapshot should match snapshot active 1`] = `"<span class=\\"sc-AxjAm eNFStq\\"><span class=\\"sc-AxirZ blCCDh\\"><svg alt=\\"Unlike\\" title=\\"Unlike\\" data-testid=\\"liked-icon\\">icon-heart-full.svg</svg></span><span data-testid=\\"text\\" class=\\"sc-AxiKw WEjOH\\">Added</span></span>"`;
+exports[`FavoriteButton Component Snapshot should match snapshot active 1`] = `"<span class=\\"sc-AxjAm eNFStq\\"><span class=\\"sc-AxirZ blCCDh\\"><svg alt=\\"Unlike\\" title=\\"Unlike\\" data-testid=\\"liked-icon\\">icon-heart-full.svg</svg></span><span data-testid=\\"text\\" class=\\"sc-AxiKw efDhAh\\">Added</span></span>"`;
 
-exports[`FavoriteButton Component Snapshot should match snapshot not active 1`] = `"<span class=\\"sc-AxjAm gEBWDb\\"><span class=\\"sc-AxirZ blCCDh\\"><svg alt=\\"Like\\" title=\\"Like\\" data-testid=\\"unliked-icon\\">icon-heart-grey.svg</svg></span><span data-testid=\\"text\\" class=\\"sc-AxiKw fVbvwY\\">Add to favourites</span></span>"`;
+exports[`FavoriteButton Component Snapshot should match snapshot not active 1`] = `"<span class=\\"sc-AxjAm gEBWDb\\"><span class=\\"sc-AxirZ blCCDh\\"><svg alt=\\"Like\\" title=\\"Like\\" data-testid=\\"unliked-icon\\">icon-heart-grey.svg</svg></span><span data-testid=\\"text\\" class=\\"sc-AxiKw hpNIQS\\">Add to favourites</span></span>"`;

@@ -11,7 +11,6 @@ const commonPosition = `
 
 const commonText = `
   color: #ffffff;
-  font-family: Helvetica;
 `;
 
 export const Container = styled.div`

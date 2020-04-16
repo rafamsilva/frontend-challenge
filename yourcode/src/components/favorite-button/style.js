@@ -19,7 +19,6 @@ export const Icon = styled.span`
 
 export const Text = styled.span`
   color: ${(props) => (props.active ? '#FFF' : '#7a8c99')};
-  font-family: Helvetica;
   font-size: 16px;
   letter-spacing: 0.17px;
   line-height: 19px;

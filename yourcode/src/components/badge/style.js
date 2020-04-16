@@ -21,7 +21,6 @@ export const Icon = styled.span`
 
 export const Text = styled.span`
   color: #ffffff;
-  font-family: Helvetica;
   font-size: 16px;
   letter-spacing: 0.17px;
   line-height: 20px;

@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { ReactComponent as Empty } from '../../assets/images/empty-illustration.svg';
 
 const customFont = `
-  font-family: Helvetica;
   text-align: center;
 `;
 
