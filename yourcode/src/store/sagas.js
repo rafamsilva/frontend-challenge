@@ -5,17 +5,15 @@ import OmdbProvider from '../providers/omdb.provider';
 function* fetchMovies(action) {
   const filter = action.payload.text;
 
-  if (filter) {
-    try {
-      yield put({ type: 'START_LOADER' });
-      yield put({ type: 'SET_FILTER', payload: { filter } });
+  try {
+    yield put({ type: 'START_LOADER' });
+    yield put({ type: 'SET_FILTER', payload: { filter } });
 
-      const movies = yield call(OmdbProvider.fetchMovies, filter);
+    const movies = filter ? yield call(OmdbProvider.fetchMovies, filter) : [];
 
-      yield put({ type: 'MOVIES_FETCH_SUCCEEDED', payload: { movies } });
-    } catch (err) {
-      yield put({ type: 'MOVIES_FETCH_FAILED', payload: { err } });
-    }
+    yield put({ type: 'MOVIES_FETCH_SUCCEEDED', payload: { movies } });
+  } catch (err) {
+    yield put({ type: 'MOVIES_FETCH_FAILED', payload: { err } });
   }
 }
 
