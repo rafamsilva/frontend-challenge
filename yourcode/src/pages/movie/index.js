@@ -8,7 +8,7 @@ import Header from '../../components/header';
 
 import OmdbProvider from '../../providers/omdb.provider';
 
-import MovieDetailsContainer from '../../containers/move-details';
+import MovieDetailsContainer from '../../containers/movie-details';
 
 import { START_LOADER_ACTION, STOP_LOADER_ACTION } from '../../store/actions';
 
