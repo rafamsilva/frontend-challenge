@@ -7,9 +7,17 @@ import { Container, Icon, Text } from './style';
 export default function FavoriteButton({ active }) {
   return (
     <Container active={active}>
-      <Icon>{active ? <FullHeartIcon alt="Unlike" title="Unlike" /> : <HeartIcon alt="Like" title="Like" />}</Icon>
+      <Icon>
+        {active ? (
+          <FullHeartIcon alt="Unlike" title="Unlike" data-testid="liked-icon" />
+        ) : (
+          <HeartIcon alt="Like" title="Like" data-testid="unliked-icon" />
+        )}
+      </Icon>
 
-      <Text active={active}>{active ? 'Added' : 'Add to favourites'}</Text>
+      <Text data-testid="text" active={active}>
+        {active ? 'Added' : 'Add to favourites'}
+      </Text>
     </Container>
   );
 }
