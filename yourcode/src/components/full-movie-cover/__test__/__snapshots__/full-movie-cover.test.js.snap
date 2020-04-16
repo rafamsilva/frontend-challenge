@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FullMovieCover Component Snapshot should match snapshot with image 1`] = `"<div class=\\"sc-AxjAm lbsqek\\"><img data-testid=\\"image\\" src=\\"http://www.fillmurray.com.br/100/100\\"></div>"`;
+
+exports[`FullMovieCover Component Snapshot should match snapshot without image 1`] = `"<div class=\\"sc-AxjAm lbsqek\\"></div>"`;
