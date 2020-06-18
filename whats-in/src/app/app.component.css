@@ -1,0 +1,7 @@
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+.container__brand{
+    padding: 15px 0px 10px 0px;
+}

@@ -1,0 +1,15 @@
+.content{
+    display: flex;
+    align-items: center;
+    
+    padding-top: 20px ;
+}
+
+.contenyt__empty{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contenyt__empty__img{
+    padding-bottom: 10px;
+}

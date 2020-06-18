@@ -1,0 +1,8 @@
+.navbar__input{
+    width: 100%;
+    border: none;  
+    outline: none;
+    padding: 10px;
+    padding-left: 40px;
+    border-radius: 5px;    
+}
