@@ -11,34 +11,31 @@ const routes = require.context(
   /.route./
 );
 
-let mappedRoutes;
+let mappedRoutes = [];
 routes.keys().forEach((fileName) => {
-  mappedRoutes = [...routes(fileName).default];
+  routes(fileName).default.forEach((item) => {
+    mappedRoutes.push(item);
+  });
 });
 
-function RenderComponent(props) {
-  const { route } = props;
-  return (
-    <Route
-      path={route.path}
-      exact={true}
-      render={(props) => (
-        <div className="content">
-          <route.component {...props} />
-        </div>
-      )}
-    />
-  );
-}
-
 function renderRouter() {
+  mappedRoutes.reverse();
+
   return (
     <Router>
       <Header />
       <Switch>
-        {mappedRoutes.map((route, i) => {
-          return <RenderComponent route={route} key={i} />;
-        })}
+        {mappedRoutes.map((route, i) => (
+          <Route
+            path={route.path}
+            exact={true}
+            render={(routerProps) => (
+              <div className="content">
+                <route.component {...routerProps} />
+              </div>
+            )}
+          />
+        ))}
       </Switch>
     </Router>
   );

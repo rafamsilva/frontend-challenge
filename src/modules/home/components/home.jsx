@@ -1,12 +1,14 @@
 import React, { Fragment, useState } from "react";
+import { Link } from "react-router-dom";
+import Loader from "react-loader-spinner";
 import axios from "axios";
 import IconSearch from "../../../assets/icons/icon-magnifier-grey.svg";
+import LogoEmpty from "../../../assets/illustrations/illustration-empty-state.png";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import Loader from "react-loader-spinner";
 
 function Home() {
   const [loading, setLoading] = useState(false);
-  const [filmes, setFilmes] = useState([]);
+  const [filmes, setFilmes] = useState(undefined);
 
   const onChange = async (event) => {
     const value = event.target.value;
@@ -27,15 +29,15 @@ function Home() {
       } else {
         setLoading(false);
 
-        setFilmes([]);
+        setFilmes(undefined);
       }
-    }, 500);
+    }, 1000);
   };
 
   return (
     <form className="container">
       <label>
-        <img src={IconSearch} />
+        <img src={IconSearch} alt="serch" />
         {loading && (
           <Loader
             type="ThreeDots"
@@ -52,19 +54,25 @@ function Home() {
             return (
               <Fragment key={i}>
                 {item.poster_path && (
-                  <Fragment key={i}>
-                    <div>
-                      <p>{item.original_title}</p>
+                  <div>
+                    <Link to={`/details/${item.id}`}>
                       <img
                         src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
+                        alt="filmes"
                       />
-                    </div>
-                  </Fragment>
+                    </Link>
+                  </div>
                 )}
               </Fragment>
             );
           })}
       </div>
+      {!filmes && (
+        <div className="logo-empty">
+          <img src={LogoEmpty} alt="empty" />
+          <h1>Nenhum registro encontrado...</h1>
+        </div>
+      )}
     </form>
   );
 }
