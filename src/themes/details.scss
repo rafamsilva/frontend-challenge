@@ -132,10 +132,13 @@
 }
 
 @media (max-width: 960px) {
+  .content-details .details {
+    margin-right: 10px;
+  }
   .content-details img.movie-img {
     width: 230px;
     height: 370px;
-    margin-left: 0px;
+    margin-left: 10px;
   }
 
   .buttons-details button .text-button {

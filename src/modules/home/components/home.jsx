@@ -25,7 +25,7 @@ function Home() {
 
         const { data } = response;
         const { results } = data;
-        setFilmes(results);
+        setFilmes(results.length > 0 ? results : undefined);
       } else {
         setLoading(false);
 
