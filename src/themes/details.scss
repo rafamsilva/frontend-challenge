@@ -1,0 +1,166 @@
+.back-route {
+  position: relative;
+  width: 50px;
+  cursor: pointer;
+}
+
+.content-details {
+  display: grid;
+  grid-template-rows: 100px 100px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "details img" "details img";
+  width: 100%;
+  color: #fbfcfd;
+  margin-top: 20px;
+}
+
+.content-details .details {
+  display: grid;
+  margin-right: 40px;
+  grid-area: details;
+}
+.content-details .details h1 {
+  font-size: 70px;
+}
+
+.overview,
+.genero,
+.empresas {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.overview label,
+.genero label,
+.empresas label {
+  color: #7a8c99;
+}
+
+.overview p,
+.genero p,
+.empresas p {
+  color: #fbfcfd;
+}
+
+.row-genero-empresa {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.row-genero-empresa .empresas {
+  margin-left: 20px;
+}
+
+.content-details img.movie-img {
+  display: grid;
+  border-radius: 10px;
+  width: 350px;
+  height: 500px;
+  margin-left: 120px;
+  grid-area: img;
+}
+
+.buttons-details {
+  display: flex;
+  margin-top: 30px;
+}
+
+.buttons-details button .heart {
+  width: 20px;
+  height: 20px;
+  margin-right: 7px;
+}
+
+.buttons-details button {
+  display: flex;
+  justify-content: start;
+  align-content: center;
+  color: #7a8c99;
+  margin-left: 5px;
+  border-radius: 5px;
+  width: 200px;
+  height: 32px;
+  background-color: #0a1014;
+  padding: 5px;
+  border: 1px solid #7a8c99;
+  cursor: pointer;
+  outline: 0;
+}
+
+.buttons-details .imdb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons-details .imdb .icon-imdb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff9f1c;
+  border-radius: 5px 0 0 5px;
+  padding: 15px 20px 15px 20px;
+  width: 25px;
+  height: 25px;
+}
+
+.buttons-details .imdb .imdb-average {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0a1014;
+  border-radius: 0 5px 5px 0;
+  padding: 14px 20px 14px 20px;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+  border-color: #7a8c99;
+}
+
+@media (max-width: 1400px) {
+  .content-details .details h1 {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .content-details .details h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 960px) {
+  .content-details .details {
+    margin-right: 10px;
+  }
+  .content-details img.movie-img {
+    width: 230px;
+    height: 370px;
+    margin-left: 10px;
+  }
+
+  .buttons-details button .text-button {
+    display: none;
+  }
+
+  .buttons-details button .heart {
+    margin-right: 0px;
+  }
+
+  .buttons-details button {
+    max-width: 33px;
+  }
+
+  .overview,
+  .genero,
+  .empresas {
+    font-size: 13px;
+    margin-top: 15px;
+  }
+
+  .content-details .details h1 {
+    font-size: 30px;
+  }
+}

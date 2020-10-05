@@ -1,0 +1,14 @@
+@import "header.scss";
+@import "form.scss";
+@import "details.scss";
+@import "reset.scss";
+
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 90%;
+  padding: 25px 25px 0 25px;
+}
